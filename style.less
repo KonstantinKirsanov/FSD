@@ -1,0 +1,64 @@
+/* Vector */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 14px;
+    color: #1F2041;
+}
+header {
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 33px;
+}
+
+main {
+    display: flex;
+}
+
+.color-column {
+    margin-left: 150px;
+}
+
+
+.color-row {
+    display: flex;
+    align-items: center;
+    height: 170px;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 29px;
+}
+.color-row div {
+    display: flex;
+    flex-direction: column;
+}
+.color-row::before {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.color-row-1::before {
+    background: #1F2041;
+}
+.color-name {
+    font-weight: bold;
+    font-size: 19px;
+    margin: 0;
+    margin-left: 110px;
+}
+.color-code {
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+    margin-left: 110px;
+}
+
+
+
