@@ -7,11 +7,12 @@ body {
     text-decoration: none;
     font-size: 14px;
     color: #1F2041;
+    width: 100%;
 }
 header {
     padding: 30px;
-    width: 100%;
     margin-bottom: 33px;
+    width: calc(100%-30px);
 }
 
 main {
@@ -26,7 +27,7 @@ main {
 .color-row {
     display: flex;
     align-items: center;
-    height: 170px;
+    height: 70px;
     margin-bottom: 20px;
     position: relative;
     line-height: 29px;
@@ -46,6 +47,24 @@ main {
 
 .color-row-1::before {
     background: #1F2041;
+}
+.color-row-2::before {
+    background: rgba(31, 32, 65, 0.75);
+}
+.color-row-3::before {
+    background: rgba(31, 32, 65, 0.50);
+}
+.color-row-4::before {
+    background: rgba(31, 32, 65, 0.25);
+}
+.color-row-5::before {
+    background: rgba(31, 32, 65, 0.05);
+}
+.color-row-6::before {
+    background: #BC9CFF;
+}
+.color-row-7::before {
+    background: #6FCF97
 }
 .color-name {
     font-weight: bold;
