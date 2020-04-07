@@ -1,4 +1,4 @@
-/* Vector */
+
 body {
   padding: 0;
   margin: 0;
@@ -45,7 +45,7 @@ main {
 }
 .color-column {
   margin-left: 150px;
-  margin-right: 435px;
+  margin-right: 427px;
 }
 .color-row {
   display: flex;
@@ -104,7 +104,6 @@ main {
 .heading-column__items {
   display: flex;
   margin-bottom: 50px;
-  width: 376px;
 }
 .heading-column__items h1:first-child,
 .heading-column__items h2:first-child,
@@ -113,10 +112,15 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   content: '';
-  width: 100px;
-  height: 100px;
-  background-color: #BC9CFF;
+  width: 40px;
   text-align: right;
   margin-right: 30px;
   color: rgba(31, 32, 65, 0.25);
+}
+
+.heading-column__items h1:last-child,
+.heading-column__items h2:last-child,
+.heading-column__items h3:last-child,
+.heading-column__items p:last-child {
+  width: 336px;
 }
