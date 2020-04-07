@@ -8,6 +8,31 @@ body {
     font-size: 14px;
     color: #1F2041;
     width: 100%;
+    line-height: 24px;
+}
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h2 {
+    font-size: 19px;
+    line-height: 24px;
+}
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
 }
 header {
     padding: 30px;
@@ -21,6 +46,7 @@ main {
 
 .color-column {
     margin-left: 150px;
+    margin-right: 435px;
 }
 
 
@@ -71,6 +97,7 @@ main {
     font-size: 19px;
     margin: 0;
     margin-left: 110px;
+    width: 500px;
 }
 .color-code {
     font-size: 19px;
@@ -79,5 +106,14 @@ main {
     margin-left: 110px;
 }
 
-
-
+.heading-column__items {
+    display: flex;
+    margin-bottom: 50px;
+    width: 376px;
+}
+.heading-column__items h1:first-child, .heading-column__items h2:first-child, .heading-column__items h3:first-child, .heading-column__items p:first-child{
+    width: 40px;
+    text-align: right;
+    margin-right: 30px;
+    color: rgba(31, 32, 65, 0.25);
+}
