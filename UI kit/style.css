@@ -1,4 +1,4 @@
-
+/* ________Main style________*/
 body {
   padding: 0;
   margin: 0;
@@ -8,13 +8,15 @@ body {
   width: 100%;
   line-height: 24px;
 }
-h1, h2 {
+h1,
+h2 {
   font-family: 'Quicksand', sans-serif;
   padding: 0;
   margin: 0;
   font-weight: bold;
 }
-p, h3 {
+p,
+h3 {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -43,6 +45,7 @@ header {
 main {
   display: flex;
 }
+/* ________Color & Type________*/
 .color-column {
   margin-left: 150px;
   margin-right: 427px;
@@ -117,10 +120,80 @@ main {
   margin-right: 30px;
   color: rgba(31, 32, 65, 0.25);
 }
-
 .heading-column__items h1:last-child,
 .heading-column__items h2:last-child,
 .heading-column__items h3:last-child,
 .heading-column__items p:last-child {
   width: 336px;
+}
+/* ________Form Elements________*/
+.field-column {
+  margin-left: 140px;
+}
+.field-column div {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.field-column div div h3:last-child {
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: auto;
+  font-weight: normal;
+}
+.checkbox-column {
+  margin-left: 126px;
+  margin-right: 132px;
+}
+.form__input {
+  width: 320px;
+  height: 44px;
+  padding: 13px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: rgba(31, 32, 65, 0.25);
+}
+.form__input:hover,
+.form__input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+.text-field_hover {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  color: rgba(31, 32, 65, 0.75);
+}
+.dropdown {
+  width: 320px;
+  height: 44px;
+  padding-right: 13px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: rgba(31, 32, 65, 0.75);
+  align-items: center;
+  text-align: center;
+}
+i {
+  margin-left: auto;
+  color: rgba(31, 32, 65, 0.5);
+}
+.date-dropdown {
+  width: 150px !important;
+  height: 44px;
+  padding-right: 13px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: rgba(31, 32, 65, 0.75);
+  align-items: center;
+  text-align: center;
 }
