@@ -181,22 +181,6 @@ main {
 .dropdown__field {
   width: 320px;
   height: 44px;
-  padding-left: 15px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin-bottom: 22.56px;
-  text-align: center;
-  justify-content: center;
-}
-i {
-  margin-left: auto;
-  padding-right: 13px;
-  color: rgba(31, 32, 65, 0.5);
-}
-.date-dropdown {
-  width: 150px !important;
-  height: 44px;
   padding-right: 13px;
   padding-left: 15px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -208,28 +192,69 @@ i {
   align-items: center;
   text-align: center;
 }
+i {
+  margin-left: auto;
+  color: rgba(31, 32, 65, 0.5);
+}
+.date-dropdown {
+  width: 150px ;
+  height: 44px;
+  padding-right: 13px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: rgba(31, 32, 65, 0.75);
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
 .flex-blocks {
   display: flex;
 }
 .date-dropdown-block {
-  width: 150px !important;
+  width: 150px ;
   margin-bottom: 40.56px;
 }
 .date-dropdown-block:last-child {
   margin-left: auto;
 }
 .date-dropdown-block h3 {
-  color: #1F2041 !important;
-  margin-left: 0 !important;
-  font-weight: bold !important;
+  color: #1F2041;
+  margin-left: 0 ;
+  font-weight: bold ;
+}
+.filter-date-dropdown {
+  margin-bottom: 41px;
 }
 .filter-date-dropdown h3 {
-  color: #1F2041 !important;
-  margin-left: 0 !important;
-  font-weight: bold !important;
+  color: #1F2041;
+  margin-left: 0 ;
+  font-weight: bold ;
 }
 .filter-date-dropdown__dropdown {
-  width: 266px !important;
+  width: 266px ;
+  height: 44px;
+  padding-right: 13px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 5px;
+  color: rgba(31, 32, 65, 0.75);
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+.subscription-text-field h3 {
+  color: #1F2041;
+  margin-left: 0 ;
+  font-weight: bold ;
+}
+.subscription-text-field__dropdown {
+  width: 266px ;
   height: 44px;
   padding-right: 13px;
   padding-left: 15px;
@@ -238,7 +263,26 @@ i {
   border-radius: 4px;
   margin-top: 5px;
   margin-bottom: 20px;
-  color: rgba(31, 32, 65, 0.75);
+  color: rgba(31, 32, 65, 0.25);
   align-items: center;
   text-align: center;
+  display: flex;
+}
+.subscription-field {
+  width: 266px;
+}
+.subscription-text-field i {
+  text-align: center;
+  left: -30px;
+  top: 1.5px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
 }
