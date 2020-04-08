@@ -17,30 +17,32 @@
     </header>    
     <main>
         <div class="field-column">
-            <div>
+            <div class="text-field">
                 <div>
                     <h3>text field</h3>
                     <h3>default</h3>
                 </div>
                 <input type="text" name="email" class="form__input" placeholder="Email">
             </div>
-            <div>
+            <div class="text-field">
                 <div>
                     <h3>text field</h3>
                     <h3>hover / focus</h3>
                 </div>
                 <input type="text"  class="form__input text-field_hover" placeholder="This is pretty awesome">
             </div>
-            <div>
-                <div>
+
+            <div class="dropdown">
+                <div class="dropdown__text">
                     <h3>dropdown</h3>
                     <h3>default</h3>
                 </div>
-                <div class="dropdown">
+                <div class="dropdown__field">
                     <p>Сколько гостей</p>
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
+
             <div>
                 <div>
                     <h3>Masked text field</h3>
@@ -48,8 +50,10 @@
                 </div>
                 <input type="text" name="date" class="form__input" placeholder="ДД.ММ.ГГГГ">
             </div>
-            <div style="display: flex;">
-                <div style="width: 150px">
+
+
+            <div class="flex-blocks">
+                <div class="date-dropdown-block">
                     <div>
                         <h3>date dropdown</h3>
                     </div>
@@ -58,7 +62,7 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                 </div>
-                <div style="width: 150px">
+                <div class="date-dropdown-block">
                     <div>
                         <h3>date dropdown</h3>
                     </div>
@@ -66,6 +70,25 @@
                         <p>19.08.2019</p>
                         <i class="fas fa-chevron-down"></i>
                     </div>
+                </div>
+            </div>
+            <div class="filter-date-dropdown">
+                <div>
+                    <h3>filter date dropdown</h3>
+                </div>
+                <div class="filter-date-dropdown__dropdown">
+                    <p>19 авг - 23 авг</p>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="filter-date-dropdown">
+                <div>
+                    <h3>filter date dropdown</h3>
+                </div>
+                <div class="filter-date-dropdown__dropdown">
+                    <p>Email</p>
+                    <i class="fas fa-arrow-right" style="color: red;"></i>
                 </div>
             </div>
             

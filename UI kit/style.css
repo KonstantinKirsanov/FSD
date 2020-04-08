@@ -130,12 +130,12 @@ main {
 .field-column {
   margin-left: 140px;
 }
-.field-column div {
+.text-field div {
   width: 320px;
   display: flex;
   flex-wrap: wrap;
 }
-.field-column div div h3:last-child {
+.text-field div h3:last-child {
   color: rgba(31, 32, 65, 0.5);
   margin-left: auto;
   font-weight: normal;
@@ -167,6 +167,35 @@ main {
 }
 .dropdown {
   width: 320px;
+}
+.dropdown div {
+  display: flex;
+}
+.dropdown__text {
+  margin-bottom: 5px;
+}
+.dropdown__text h3:last-child {
+  margin-left: auto;
+  color: rgba(31, 32, 65, 0.5);
+}
+.dropdown__field {
+  width: 320px;
+  height: 44px;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 22.56px;
+  text-align: center;
+  justify-content: center;
+}
+i {
+  margin-left: auto;
+  padding-right: 13px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.date-dropdown {
+  width: 150px !important;
   height: 44px;
   padding-right: 13px;
   padding-left: 15px;
@@ -179,12 +208,28 @@ main {
   align-items: center;
   text-align: center;
 }
-i {
-  margin-left: auto;
-  color: rgba(31, 32, 65, 0.5);
+.flex-blocks {
+  display: flex;
 }
-.date-dropdown {
+.date-dropdown-block {
   width: 150px !important;
+  margin-bottom: 40.56px;
+}
+.date-dropdown-block:last-child {
+  margin-left: auto;
+}
+.date-dropdown-block h3 {
+  color: #1F2041 !important;
+  margin-left: 0 !important;
+  font-weight: bold !important;
+}
+.filter-date-dropdown h3 {
+  color: #1F2041 !important;
+  margin-left: 0 !important;
+  font-weight: bold !important;
+}
+.filter-date-dropdown__dropdown {
+  width: 266px !important;
   height: 44px;
   padding-right: 13px;
   padding-left: 15px;
