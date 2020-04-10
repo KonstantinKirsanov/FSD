@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
     <script src="https://kit.fontawesome.com/760655fe14.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
     <header>
@@ -86,30 +88,160 @@
                 </div>
                 <div>
                     <input type="text" name="Email" class="form__input subscription-field" placeholder="Email">
-                    <i class="fas fa-arrow-right asdasdasd"></i>
+                    <i class="fas fa-arrow-right"></i>
                 </div>
             </div>
         </div>
         <div class="checkbox-column">
-            <h3>checkbox buttons</h3>
-            <div class="checkbox">
-                <input type="checkbox" id="checkbox_1">
-                <label for="checkbox_1">Можно курить</label>
+            <div>
+                <h3>checkbox buttons</h3>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox-1">
+                    <label for="checkbox-1">Можно курить</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" checked="checked" id="checkbox-2">
+                    <label for="checkbox-2">Можно с питомцами</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" checked="checked" id="checkbox-3">
+                    <label for="checkbox-3">Можно пригласить гостей (до 10 человек)</label>
+                </div>
             </div>
-            <div class="checkbox">
-                <input type="checkbox" id="checkbox_2">
-                <label for="checkbox_2">Можно с питомцами</label>
+            <div>
+                <h3>radio buttons</h3>
+                <div class="flex-blocks">
+                    <div class="radio-buttons">
+                        <input type="checkbox" checked="checked" id="radio-buttons-1">
+                        <label for="radio-buttons-1">Мужчина</label>
+                    </div>
+                    <div class="radio-buttons">
+                        <input type="checkbox" id="radio-buttons-2">
+                        <label for="radio-buttons-2">Женщина</label>
+                    </div>
+                </div>
+            </div> 
+            <div>
+                <h3>toggle</h3>
+                <div class="toggles">
+                    <input type="checkbox" checked="checked" id="toggle-1">
+                    <label for="toggle-1">Получать спецпредложения</label>
+                </div>
+                <div class="toggles">
+                    <input type="checkbox" id="toggle-2">
+                    <label for="toggle-2">Получать спецпредложения</label>
+                </div>
             </div>
-            <div class="checkbox">
-                <input type="checkbox" id="checkbox_3">
-                <label for="checkbox_3">Можно пригласить гостей (до 10 человек)</label>
+            <h3>like button</h3>
+            <div class="flex-blocks">
+                <div class="like-button">
+                    <input type="checkbox" id="like-1">
+                    <label for="like-1">
+                        <i class="fas fa-heart"></i>
+                        <i class="far fa-heart"></i>
+                        <span>2</span>
+                    </label>
+                </div>
+                <div class="like-button">
+                    <input type="checkbox" checked="checked" id="like-2">
+                    <label for="like-2">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>12</span>
+                    </label>
+                </div>
             </div>
-            <div class="radio-buttons">
-                <input type="checkbox" id="radio-buttons_1">
-                <label for="radio-buttons_1">Мужчина</label>
+            <h3>rate button</h3>
+            <div class="flex-blocks">
+                <div class="rate-button">
+                    <input type="checkbox" id="star-1">
+                    <label for="star-1">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" id="star-2">
+                    <label for="star-2">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" id="star-3">
+                    <label for="star-3">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" id="star-4">
+                    <label for="star-4">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" id="star-5">
+                    <label for="star-5">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                </div>
+                <div class="rate-button">
+                    <input type="checkbox" checked="checked" id="star-1">
+                    <label for="star-1">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" checked="checked" id="star-2">
+                    <label for="star-2">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" checked="checked" id="star-3">
+                    <label for="star-3">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" checked="checked" id="star-4">
+                    <label for="star-4">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                    <input type="checkbox" checked="checked" id="star-5">
+                    <label for="star-5">
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                    </label>
+                </div>
             </div>
         </div>
-        <div class="buttons-column"></div>
+        <div class="buttons-column">
+            <div class="flex-blocks">
+                <h3>range slider</h3>
+                <lavel for="volume"></lavel> <h3>5 000₽ - 10 000₽</h3></label>
+                <input type="range" id="volume" name="volume" min="0" max="10000">
+            </div>
+            <h3>buttons</h3>
+            <div class="flex-blocks">
+                <button class="button-1"><h3>click me</h3></button>
+                <button class="button-1"><h3>click me</h3></button>
+            </div>
+            <div class="flex-blocks">
+                <button class="button-2"><h3>click me</h3></button>
+                <button class="button-2"><h3>click me</h3></button>
+            </div>
+            <div class="flex-blocks">
+                <button class="button-2"><h3>click me</h3></button>
+                <button class="button-2"><h3>click me</h3></button>
+            </div>
+            <button class="pay-button" type="button"><h3>Перейти к оплате</h3><i class="fas fa-arrow-right"></i></button>
+            <h3>pagination</h3>
+            <div>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <p>...</p>
+                <button>15</button>
+                <button><i class="fas fa-arrow-right"></button>
+            </div>
+            <p>1-12 из 100+ вариантов аренды</p>
+            <button class="purchase__button" type="button"><p>BUY</p></button>
+
+        </div>
     </main>
 </body>
 </html>
