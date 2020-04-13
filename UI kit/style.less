@@ -41,12 +41,19 @@ body {
     margin-bottom: 33px;
     width: calc(100%-30px);
   }
+
+  button {
+    outline:none;
+  }
+
   main {
     display: flex;
   }
   
   /* ________Color & Type________*/
   
+  @main-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
   .color-column {
     margin-left: 150px;
     margin-right: 427px;
@@ -302,6 +309,9 @@ body {
   -o-text-fill-color: transparent;
 }
 
+.buttons-column > h3 {
+  margin-bottom: 16px;
+}
 /* ----------Checkbox Buttons----------*/
 
 .checkbox-column {
@@ -630,16 +640,92 @@ body {
 /* ----------Rate Buttons end----------*/
 
 /* ----------Buttons end----------*/
+button {
+  color: #ffffff;
+  border-radius: 22px;
+  border: 0;
+  box-shadow: 0;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-1 {
+  width: 99px;
+  height: 44px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+
+.button-2 {
+  position: relative;
+  width: 97px;
+  height: 42px;
+  margin-right: 21px;
+  margin-bottom: 31px;
+  border-radius: 30px;
+  background: #fff;
+  text-align: center;
+  margin-top: 1px;
+  margin-left: 1px;
+  & h3 {
+    color: #BC9CFF;
+    z-index: 1;
+  }
+  &::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: @main-gradient;
+  border-radius: 34px;
+  z-index: -1;
+}
+}
+
+.button-2_disabled {
+  cursor: not-allowed;
+  &::before {
+  opacity: 0.5;
+}
+}
+
+.button-3 {
+  background-color: #ffffff;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  & h3 {
+    color: #BC9CFF;
+  }
+}
+.button-3_disabled {
+  background-color: #ffffff;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  cursor: not-allowed;
+  & h3 {
+    color: rgba(31, 32, 65, 0.5);
+  }
+}
 
 .pay-button {
+  position: relative;
   width: 320px;
   height: 44px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-border: 0;
-box-shadow: 0;
-& h3{
-  color: #ffffff;
+  margin-bottom: 40px;
+  & h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: bold;
@@ -647,17 +733,12 @@ box-shadow: 0;
   line-height: 15px;
   text-transform: uppercase;
   text-align: center;
+  & span {
+    position: absolute;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 24px;
+    right: 10px;
+  }
 }
-}
-
-.purchase__button {
-	width: 200px;
-	height: 50px;
-	margin-left: 40px;
-	margin-bottom: 20px;
-	border-radius: 10px;
-	background-color: #fff;
-  border-width: 0;
-  border-radius: 5px;
-  border: 1px solid black;
 }
