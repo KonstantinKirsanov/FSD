@@ -161,7 +161,7 @@ main {
   display: flex;
   flex-wrap: wrap;
 }
-.text-field div h3:last-child {
+.text-field div > h3:last-child {
   color: rgba(31, 32, 65, 0.5);
   margin-left: auto;
   font-weight: normal;
@@ -196,7 +196,7 @@ main {
 .dropdown__text {
   margin-bottom: 5px;
 }
-.dropdown__text h3:last-child {
+.dropdown__text > h3:last-child {
   margin-left: auto;
   color: rgba(31, 32, 65, 0.5);
   font-style: normal;
@@ -218,12 +218,12 @@ main {
 }
 .dropdown__field > span {
   width: 44px;
+  margin-left: auto;
 }
 .dark_border {
   border: 1px solid rgba(31, 32, 65, 0.5) !important;
 }
 span {
-  margin-left: auto;
   text-align: center;
   color: rgba(31, 32, 65, 0.5);
 }
@@ -244,6 +244,7 @@ span {
   font-weight: normal;
 }
 .date-dropdown span {
+  margin-left: auto;
   width: 44px;
 }
 .flex-blocks {
@@ -284,6 +285,9 @@ span {
   align-items: center;
   text-align: center;
   display: flex;
+}
+.filter-date-dropdown__dropdown span {
+  margin-left: auto;
 }
 .subscription-text-field h3 {
   color: #1F2041;
@@ -502,46 +506,52 @@ span {
 }
 /* ----------Toggles end----------*/
 /* ----------Like Buttons----------*/
+.like-block > div {
+  margin-right: 10px;
+}
+.like-button input[type="checkbox"] {
+  display: none;
+}
 .like-button {
-  font-size: 10px;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 30px;
+  background: #fff;
+  text-align: center;
   line-height: 12px;
-  color: rgba(31, 32, 65, 0.25);
   font-family: 'Montserrat';
+}
+.like-button .fas {
+  display: none;
 }
 .like-button span {
   color: rgba(31, 32, 65, 0.25);
   font-size: 10px;
   align-items: center;
-}
-.like-button input[type="checkbox"] {
-  display: none;
+  z-index: 1;
 }
 .like-button label {
-  position: relative;
-  display: inline-block;
-  margin-right: 30px;
-  width: 40px;
-  text-align: center;
-}
-.like-button label .fas {
-  display: none;
-}
-.like-button label::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-}
-.like-button label::before {
+  display: flex;
   width: 40px;
   height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
-  box-sizing: border-box;
-  left: 0px;
-  top: -4px;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.like-button label::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 34px;
+  z-index: -1;
 }
 .like-button input[type="checkbox"]:checked + label::before {
-  border: 1px solid #BC9CFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .like-button input[type="checkbox"]:checked + label {
   color: #BC9CFF;

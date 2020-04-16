@@ -172,7 +172,7 @@ body {
     width:@input-sizing;
     display: flex; 
     flex-wrap: wrap;
-    & h3:last-child{
+    & > h3:last-child{
       color: rgba(31, 32, 65, 0.5);
       margin-left: auto;
       font-weight: normal;
@@ -211,7 +211,7 @@ body {
   .dropdown__text {
     margin-bottom: 5px;
 
-    & h3:last-child {
+    & > h3:last-child {
       margin-left: auto;
       color: rgba(31, 32, 65, 0.5);
       font-style: normal;
@@ -233,13 +233,14 @@ body {
     text-align: center;
     & > span {
       width: 44px;
+      margin-left: auto;
     }
   }
   .dark_border {
     border: 1px solid rgba(31, 32, 65, 0.50) !important;
   }
   span {
-    margin-left: auto;
+
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
   }
@@ -260,6 +261,7 @@ body {
     font-style: normal;
     font-weight: normal;
     &  span {
+      margin-left: auto;
       width: 44px;
     }
   }
@@ -303,6 +305,9 @@ body {
     align-items: center;
     text-align: center;
     display: flex;
+    & span {
+      margin-left: auto;
+    }
   }
 
 
@@ -559,51 +564,57 @@ body {
 /* ----------Toggles end----------*/
 
 /* ----------Like Buttons----------*/
-
-.like-button {
-  font-size: 10px;
-  line-height: 12px;
-  color: rgba(31, 32, 65, 0.25);
-  font-family: 'Montserrat';
-  & span {
-    color: rgba(31, 32, 65, 0.25);
-    font-size: 10px;
-    align-items: center;
-  }
+.like-block > div{
+  margin-right: 10px;
 }
 .like-button input[type="checkbox"] {
   display: none;
 }
 
-.like-button label {
+.like-button {
   position: relative;
-  display: inline-block;
-  margin-right: 30px;
   width: 40px;
+  height: 20px;
+  border-radius: 30px;
+  background: #fff;
   text-align: center;
+  line-height: 12px;
+  font-family: 'Montserrat';
   & .fas {
     display: none;
   }
-}
-
-.like-button label::before {
-  position: absolute;
+  &  span {
+      color: rgba(31, 32, 65, 0.25);
+      font-size: 10px;
+      align-items: center;
+      z-index: 1;
+    }
+  & label {
+    display: flex;
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  & label::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 34px;
+  z-index: -1;
+  
+}
 }
 
-.like-button label::before{
-  width: 40px;
-  height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
-  box-sizing: border-box;
-  left: 0px;
-  top: -4px;
-}
+
 
 .like-button input[type="checkbox"]:checked + label::before {
-  border: 1px solid #BC9CFF;
+    background: @main-gradient;
 }
 
 .like-button input[type="checkbox"]:checked + label {
