@@ -40,7 +40,7 @@
     </header>    
     <main>
         <div class="form-elements-wrap">
-            <div class="column">
+            <div class="left-column">
                 <div class="text-field">
                     <div>
                         <h3>text field</h3>
@@ -60,7 +60,7 @@
                         <h3>dropdown</h3>
                         <h3>default</h3>
                     </div>
-                    <div class="dropdown__field">
+                    <div class="dropdown__field" style="border-radius: 4px;">
                         <p>Сколько гостей</p>
                         <span class="material-icons">expand_more</span>
                     </div>
@@ -269,20 +269,133 @@
             </div>
         </div>
         <div class="form-elements-wrap">
-            <div class="column">
-                <div class="dropdown">
+            <div class="left-column">
+                <div>
                     <div class="dropdown__text">
                         <h3>dropdown</h3>
                         <h3>default</h3>
                     </div>
                     <div class="dropdown__field">
-                        <p>2 спальни,2 кровати...</p>
+                        <p>2 спальни, 2 кровати...</p>
                         <span class="material-icons">expand_more</span>
                     </div>
                 </div>
+                <div>
+                    <div class="dropdown-room">
+                        <div class="dropdown__text">
+                            <h3>dropdown</h3>
+                            <h3>EXPANDED</h3>
+                        </div>
+                        <div class="dropdown__field">
+                            <p>2 спальни, 2 кровати...</p>
+                            <span class="material-icons">expand_more</span>
+                        </div>
+                        <div class="dropdown__content">
+                            <div>
+                                <h3>спальни</h3>
+                                <div class="dropdown__content__btns-block">
+                                    <button class="dropdown-btn">-</button>
+                                    <h3>2</h3>
+                                    <button class="dropdown-btn">+</button>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>кровати</h3>
+                                <div class="dropdown__content__btns-block">
+                                    <button class="dropdown-btn">-</button>
+                                    <h3>2</h3>
+                                    <button class="dropdown-btn">+</button>
+                                </div>
+                            </div>
+                            <div>
+                                <h3>ванные комнаты</h3>
+                                <div class="dropdown__content__btns-block">
+                                    <button class="dropdown-btn dropdown-btn-disabled">-</button>
+                                    <h3>0</h3>
+                                    <button class="dropdown-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="center-column"></div>
-            <div class="column"></div>
+            <div class="column">
+                <div class="dropdown-guests">
+                    <div>
+                        <h3>dropdown</h3>
+                    </div>
+                    <div class="dropdown__field">
+                        <p>Сколько гостей</p>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="dropdown__content">
+                        <div>
+                            <h3>взрослые</h3>
+                            <div class="dropdown__content__btns-block">
+                                <button class="dropdown-btn dropdown-btn_disabled">-</button>
+                                <h3>0</h3>
+                                <button class="dropdown-btn">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>дети</h3>
+                            <div class="dropdown__content__btns-block">
+                                <button class="dropdown-btn dropdown-btn_disabled">-</button>
+                                <h3>0</h3>
+                                <button class="dropdown-btn">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>младенцы</h3>
+                            <div class="dropdown__content__btns-block">
+                                <button class="dropdown-btn dropdown-btn_disabled">-</button>
+                                <h3>0</h3>
+                                <button class="dropdown-btn">+</button>
+                            </div>
+                        </div>
+                        <button class="button-3 dropdown-btn-"><h3>click me</h3></button>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="dropdown-guests">
+                    <div class="dropdown__text">
+                        <h3>dropdown</h3>
+                        <h3>EXPANDED</h3>
+                    </div>
+                    <div class="dropdown__field">
+                        <p>2 спальни, 2 кровати...</p>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                    <div class="dropdown__content">
+                        <div>
+                            <h3>спальни</h3>
+                            <div class="dropdown__content__btns-block">
+                                <button class="dropdown-btn">-</button>
+                                <h3>2</h3>
+                                <button class="dropdown-btn">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>кровати</h3>
+                            <div class="dropdown__content__btns-block">
+                                <button class="dropdown-btn">-</button>
+                                <h3>2</h3>
+                                <button class="dropdown-btn">+</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>ванные комнаты</h3>
+                            <div class="dropdown__content__btns-block">
+                                <button class="dropdown-btn dropdown-btn_disabled">-</button>
+                                <h3>0</h3>
+                                <button class="dropdown-btn">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

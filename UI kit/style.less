@@ -66,7 +66,9 @@ body {
     }
   }
  
-  
+  span, label {
+    cursor: pointer;
+  }
   /* ________Color & Type________*/
   
   @main-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -158,6 +160,9 @@ body {
 @input-sizing: 320px;
 @dropdown-sizing: 150px;
 
+.left-column > div {
+  margin-bottom: 20px;
+}
 .form-elements-wrap {
   margin-left: 140px;
   margin-right: 140px;
@@ -165,12 +170,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .checkbox-column {
   margin: 0 30px;
 }
-  .masked-text-field {
-    margin-bottom: 20px;
-  }
   .text-field div{
     width:@input-sizing;
     display: flex; 
@@ -192,7 +195,7 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     margin-top: 5px;
-    margin-bottom: 20px;
+
     color: rgba(31, 32, 65, 0.25);
     &:hover, &:focus {
         border: 1px solid rgba(31, 32, 65, 0.5); 
@@ -205,15 +208,20 @@ body {
     color: rgba(31, 32, 65, 0.75);
   }
 
+  /* -----------Dropdown--------*/
+
+
   .dropdown {
     width: 320px;
-    & div {
-      display: flex;
-    }
+  }
+  .dropdown-room {
+    width: 266px;
+  }
+  .dropdown-guests {
+    width: 320px;
   }
   .dropdown__text {
-    margin-bottom: 5px;
-
+    display: flex;
     & > h3:last-child {
       margin-left: auto;
       color: rgba(31, 32, 65, 0.5);
@@ -223,14 +231,15 @@ body {
     }
   }
   .dropdown__field {
-    width: @input-sizing;
+    display: flex;
+    width: 100%;
     height: 44px;
     padding-left: 15px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-sizing: border-box;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     margin-top: 5px;
-    margin-bottom: 20px;
     color: rgba(31, 32, 65, 0.75);
     align-items: center;
     text-align: center;
@@ -239,6 +248,44 @@ body {
       margin-left: auto;
     }
   }
+  .dropdown__content {
+    padding: 7px 7px 7px 15px;
+    display: block;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top: 0;
+    & > div {
+    display: flex;
+    margin-bottom: 22px;
+    & h3 {
+      display: flex;
+      align-items: center;
+    }
+    }
+    & > div:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .dropdown-btn {
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 50%;
+      background-color: #fff;
+      color: rgba(31, 32, 65, 0.5);
+  }
+  .dropdown-btn_disabled {
+    opacity: 0.5;
+  }
+  .dropdown__content__btns-block {
+    width: 92px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+  
+  /* --------Dropdown-------- */
   .dark_border {
     border: 1px solid rgba(31, 32, 65, 0.50) !important;
   }
@@ -256,7 +303,6 @@ body {
     box-sizing: border-box;
     border-radius: 4px;
     margin-top: 5px;
-    margin-bottom: 20px;
     color: rgba(31, 32, 65, 0.75);
     align-items: center;
     text-align: center;
@@ -712,7 +758,6 @@ button {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
   margin-right: 20px;
-  margin-bottom: 30px;
 }
 
 
@@ -721,7 +766,6 @@ button {
   width: 97px;
   height: 42px;
   margin-right: 21px;
-  margin-bottom: 31px;
   border-radius: 30px;
   background: #fff;
   text-align: center;
@@ -754,7 +798,6 @@ button {
 .button-3 {
   background-color: #ffffff;
   margin-right: 20px;
-  margin-bottom: 30px;
   & h3 {
     color: #BC9CFF;
   }
@@ -762,7 +805,6 @@ button {
 .button-3_disabled {
   background-color: #ffffff;
   margin-right: 20px;
-  margin-bottom: 30px;
   cursor: not-allowed;
   & h3 {
     color: rgba(31, 32, 65, 0.5);
@@ -818,7 +860,6 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin-bottom: 11px;
   background-color: #ffffff00;
   color: rgba(31, 32, 65, 0.5);
   align-items: center;
