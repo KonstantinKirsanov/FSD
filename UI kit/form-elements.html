@@ -7,6 +7,28 @@
     <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+
+
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+        $( function() {
+          $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 15000,
+            step: 100,
+            values: [ 5000, 10000 ],
+            slide: function( event, ui ) 
+            
+            {
+              $( "#amount" ).val(ui.values[ 0 ].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + "₽" + " - " +  ui.values[ 1 ].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + "₽");
+            }
+          });
+          $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + "₽" +
+            " - " + $( "#slider-range" ).slider( "values", 1 ).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + "₽" );
+        } );
+        </script>
 </head>
 <body>
     <header>
@@ -17,226 +39,250 @@
         </svg>
     </header>    
     <main>
-        <div class="field-column">
-            <div class="text-field">
-                <div>
-                    <h3>text field</h3>
-                    <h3>default</h3>
-                </div>
-                <input type="text" name="email" class="form__input" placeholder="Email">
-            </div>
-            <div class="text-field">
-                <div>
-                    <h3>text field</h3>
-                    <h3>hover / focus</h3>
-                </div>
-                <input type="text"  class="form__input dark_border text-field_hover" placeholder="This is pretty awesome">
-            </div>
-            <div class="dropdown">
-                <div class="dropdown__text">
-                    <h3>dropdown</h3>
-                    <h3>default</h3>
-                </div>
-                <div class="dropdown__field">
-                    <p>Сколько гостей</p>
-                    <span class="material-icons">expand_more</span>
-                </div>
-            </div>
-            <div class="text-field masked-text-field">
-                <div>
-                    <h3>Masked text field</h3>
-                    <h3>default</h3>
-                </div>
-                <input type="text" name="date" class="form__input" placeholder="ДД.ММ.ГГГГ">
-            </div>
-            <div class="flex-blocks">
-                <div class="date-dropdown-block">
+        <div class="form-elements-wrap">
+            <div class="column">
+                <div class="text-field">
                     <div>
-                        <h3>date dropdown</h3>
+                        <h3>text field</h3>
+                        <h3>default</h3>
                     </div>
-                    <div class="date-dropdown">
-                        <p>ДД.ММ.ГГГГ</p>
+                    <input type="text" name="email" class="form__input" placeholder="Email">
+                </div>
+                <div class="text-field">
+                    <div>
+                        <h3>text field</h3>
+                        <h3>hover / focus</h3>
+                    </div>
+                    <input type="text"  class="form__input dark_border text-field_hover" placeholder="This is pretty awesome">
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown__text">
+                        <h3>dropdown</h3>
+                        <h3>default</h3>
+                    </div>
+                    <div class="dropdown__field">
+                        <p>Сколько гостей</p>
                         <span class="material-icons">expand_more</span>
                     </div>
                 </div>
-                <div class="date-dropdown-block">
+                <div class="text-field masked-text-field">
                     <div>
-                        <h3>date dropdown</h3>
+                        <h3>Masked text field</h3>
+                        <h3>default</h3>
                     </div>
-                    <div class="date-dropdown">
-                        <p>19.08.2019</p>
-                        <span class="material-icons">expand_more</span>
-                    </div>
+                    <input type="text" name="date" class="form__input" placeholder="ДД.ММ.ГГГГ">
                 </div>
-            </div>
-
-            <div class="filter-date-dropdown">
-                <div>
-                    <h3>filter date dropdown</h3>
-                </div>
-                <div class="filter-date-dropdown__dropdown">
-                    <p>19 авг - 23 авг</p>
-                    <span class="material-icons">expand_more</span>
-                </div>
-            </div>
-
-            <div class="subscription-text-field">
-                <div>
-                    <h3>subscription text field</h3>
-                </div>
-                <div>
-                    <input type="text" name="Email" class="form__input subscription-field" placeholder="Email">
-                    <span class="material-icons">arrow_forward</span>
-                </div>
-            </div>
-        </div>
-        <div class="checkbox-column">
-            <div>
-                <h3>checkbox buttons</h3>
-                <div class="checkbox">
-                    <input type="checkbox" id="checkbox-1">
-                    <label for="checkbox-1">Можно курить</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" checked="checked" id="checkbox-2">
-                    <label for="checkbox-2">Можно с питомцами</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" checked="checked" id="checkbox-3">
-                    <label for="checkbox-3">Можно пригласить гостей (до 10 человек)</label>
-                </div>
-            </div>
-            <div>
-                <h3>radio buttons</h3>
                 <div class="flex-blocks">
-                    <div class="radio-buttons">
-                        <input type="checkbox" checked="checked" id="radio-buttons-1">
-                        <label for="radio-buttons-1">Мужчина</label>
+                    <div class="date-dropdown-block">
+                        <div>
+                            <h3>date dropdown</h3>
+                        </div>
+                        <div class="date-dropdown">
+                            <p>ДД.ММ.ГГГГ</p>
+                            <span class="material-icons">expand_more</span>
+                        </div>
                     </div>
-                    <div class="radio-buttons">
-                        <input type="checkbox" id="radio-buttons-2">
-                        <label for="radio-buttons-2">Женщина</label>
+                    <div class="date-dropdown-block">
+                        <div>
+                            <h3>date dropdown</h3>
+                        </div>
+                        <div class="date-dropdown">
+                            <p>19.08.2019</p>
+                            <span class="material-icons">expand_more</span>
+                        </div>
                     </div>
                 </div>
-            </div> 
-            <div>
-                <h3>toggle</h3>
-                <div class="toggles">
-                    <input type="checkbox" checked="checked" id="toggle-1">
-                    <label for="toggle-1">Получать спецпредложения</label>
+    
+                <div class="filter-date-dropdown">
+                    <div>
+                        <h3>filter date dropdown</h3>
+                    </div>
+                    <div class="filter-date-dropdown__dropdown">
+                        <p>19 авг - 23 авг</p>
+                        <span class="material-icons">expand_more</span>
+                    </div>
                 </div>
-                <div class="toggles">
-                    <input type="checkbox" id="toggle-2">
-                    <label for="toggle-2">Получать спецпредложения</label>
+    
+                <div class="subscription-text-field">
+                    <div>
+                        <h3>subscription text field</h3>
+                    </div>
+                    <div>
+                        <input type="text" name="Email" class="form__input subscription-field" placeholder="Email">
+                        <span class="material-icons">arrow_forward</span>
+                    </div>
                 </div>
             </div>
-            <h3>like button</h3>
-            <div class="flex-blocks like-block">
-                <div class="like-button">
-                    <input type="checkbox" id="like-1">
-                    <label for="like-1">
-                        <span class="material-icons fas">favorite</span>
-                        <span class="material-icons far">favorite_border</span>
-                        <span>2</span>
-                    </label>
+            <div class="center-column">
+                <div>
+                    <h3>checkbox buttons</h3>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox-1">
+                        <label for="checkbox-1">Можно курить</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" checked="checked" id="checkbox-2">
+                        <label for="checkbox-2">Можно с питомцами</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" checked="checked" id="checkbox-3">
+                        <label for="checkbox-3">Можно пригласить гостей (до 10 человек)</label>
+                    </div>
                 </div>
-                <div class="like-button">
-                    <input type="checkbox" checked="checked" id="like-2">
-                    <label for="like-2">
-                        <span class="material-icons fas">favorite</span>
-                        <span class="material-icons far">favorite_border</span>
-                        <span>12</span>
-                    </label>
+                <div>
+                    <h3>radio buttons</h3>
+                    <div class="flex-blocks">
+                        <div class="radio-buttons">
+                            <input type="checkbox" checked="checked" id="radio-buttons-1">
+                            <label for="radio-buttons-1">Мужчина</label>
+                        </div>
+                        <div class="radio-buttons">
+                            <input type="checkbox" id="radio-buttons-2">
+                            <label for="radio-buttons-2">Женщина</label>
+                        </div>
+                    </div>
+                </div> 
+                <div>
+                    <h3>toggle</h3>
+                    <div class="toggles">
+                        <input type="checkbox" checked="checked" id="toggle-1">
+                        <label for="toggle-1">Получать спецпредложения</label>
+                    </div>
+                    <div class="toggles">
+                        <input type="checkbox" id="toggle-2">
+                        <label for="toggle-2">Получать спецпредложения</label>
+                    </div>
+                </div>
+                <h3>like button</h3>
+                <div class="flex-blocks like-block">
+                    <div class="like-button">
+                        <input type="checkbox" id="like-1">
+                        <label for="like-1">
+                            <span class="material-icons fas">favorite</span>
+                            <span class="material-icons far">favorite_border</span>
+                            <span>2</span>
+                        </label>
+                    </div>
+                    <div class="like-button">
+                        <input type="checkbox" checked="checked" id="like-2">
+                        <label for="like-2">
+                            <span class="material-icons fas">favorite</span>
+                            <span class="material-icons far">favorite_border</span>
+                            <span>12</span>
+                        </label>
+                    </div>
+                </div>
+                <h3>rate button</h3>
+                <div class="flex-blocks">
+                    <div class="rate-button">
+                        <input type="checkbox" checked="checked" id="star_1-1">
+                        <label for="star_1-1">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_1-2">
+                        <label for="star_1-2">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_1-3">
+                        <label for="star_1-3">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_1-4">
+                        <label for="star_1-4">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" id="star_1-5">
+                        <label for="star_1-5">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                    </div>
+                    <div class="rate-button">
+                        <input type="checkbox" checked="checked" id="star_2-1">
+                        <label for="star_2-1">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_2-2">
+                        <label for="star_2-2">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_2-3">
+                        <label for="star_2-3">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_2-4">
+                        <label for="star_2-4">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                        <input type="checkbox" checked="checked" id="star_2-5">
+                        <label for="star_2-5">
+                            <span class="material-icons far">star_border</span>
+                            <span class="material-icons fas">star</span>
+                        </label>
+                    </div>
                 </div>
             </div>
-            <h3>rate button</h3>
-            <div class="flex-blocks">
-                <div class="rate-button">
-                    <input type="checkbox" checked="checked" id="star_1-1">
-                    <label for="star_1-1">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_1-2">
-                    <label for="star_1-2">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_1-3">
-                    <label for="star_1-3">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_1-4">
-                    <label for="star_1-4">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" id="star_1-5">
-                    <label for="star_1-5">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
+            <div class="right-column">
+                <div class="block-range-slider">
+                    <div class="flex-blocks">
+                        <h3>range slider
+                            <input type="text" id="amount" readonly class="range-slider__text">
+                        </h3>  
+                    </div>
+                    <div>
+                        
+                        <div id="slider-range"></div>
+                    </div>
                 </div>
-                <div class="rate-button">
-                    <input type="checkbox" checked="checked" id="star_2-1">
-                    <label for="star_2-1">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_2-2">
-                    <label for="star_2-2">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_2-3">
-                    <label for="star_2-3">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_2-4">
-                    <label for="star_2-4">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
-                    <input type="checkbox" checked="checked" id="star_2-5">
-                    <label for="star_2-5">
-                        <span class="material-icons far">star_border</span>
-                        <span class="material-icons fas">star</span>
-                    </label>
+                <h3>buttons</h3>
+                <div class="flex-blocks">
+                    <button class="button-1"><h3>click me</h3></button>
+                    <button class="button-1 disabled"><h3>click me</h3></button>
                 </div>
+                <div class="flex-blocks">
+                    <button class="button-2"><h3>click me</h3></button>
+                    <button class="button-2 button-2_disabled"><h3>click me</h3></button>
+                </div>
+                <div class="flex-blocks">
+                    <button class="button-3"><h3>click me</h3></button>
+                    <button class="button-3_disabled"><h3>click me</h3></button>
+                </div>
+                <button class="pay-button" type="button"><h3>Перейти к оплате <span class="material-icons">arrow_forward</span></h3></button>
+                <h3>pagination</h3>
+                <div class="pagination">
+                    <button class="pagination-item pagination-item_active">1</button>
+                    <button class="pagination-item">2</button>
+                    <button class="pagination-item">3</button>
+                    <p class="pagination-dots">...</p>
+                    <button class="pagination-item">15</button>
+                    <button class="pagination-item pagination-item_last"><span class="material-icons">arrow_forward</span></button>
+                </div>
+                <p>1-12 из 100+ вариантов аренды</p>
             </div>
         </div>
-        <div class="buttons-column">
-            <div class="flex-blocks">
-                <h3>range slider</h3>
-                <lavel for="volume"></lavel> <h3>5 000₽ - 10 000₽</h3></label>
-                <input type="range" id="volume" name="volume" min="0" max="10000">
+        <div class="form-elements-wrap">
+            <div class="column">
+                <div class="dropdown">
+                    <div class="dropdown__text">
+                        <h3>dropdown</h3>
+                        <h3>default</h3>
+                    </div>
+                    <div class="dropdown__field">
+                        <p>2 спальни,2 кровати...</p>
+                        <span class="material-icons">expand_more</span>
+                    </div>
+                </div>
             </div>
-            <h3>buttons</h3>
-            <div class="flex-blocks">
-                <button class="button-1"><h3>click me</h3></button>
-                <button class="button-1 disabled"><h3>click me</h3></button>
-            </div>
-            <div class="flex-blocks">
-                <button class="button-2"><h3>click me</h3></button>
-                <button class="button-2 button-2_disabled"><h3>click me</h3></button>
-            </div>
-            <div class="flex-blocks">
-                <button class="button-3"><h3>click me</h3></button>
-                <button class="button-3_disabled"><h3>click me</h3></button>
-            </div>
-            <button class="pay-button" type="button"><h3>Перейти к оплате <span class="material-icons">arrow_forward</span></h3></button>
-            <h3>pagination</h3>
-            <div class="pagination">
-                <button class="pagination-item pagination-item_active">1</button>
-                <button class="pagination-item">2</button>
-                <button class="pagination-item">3</button>
-                <p class="pagination-dots">...</p>
-                <button class="pagination-item">15</button>
-                <button class="pagination-item pagination-item_last"><span class="material-icons">arrow_forward</span></button>
-            </div>
-            <p>1-12 из 100+ вариантов аренды</p>
+            <div class="center-column"></div>
+            <div class="column"></div>
         </div>
     </main>
 </body>
