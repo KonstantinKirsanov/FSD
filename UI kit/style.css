@@ -718,12 +718,7 @@ button {
 .button-3 h3 {
   color: #BC9CFF;
 }
-.button-3_disabled {
-  background-color: #ffffff;
-  margin-right: 20px;
-  cursor: not-allowed;
-}
-.button-3_disabled h3 {
+.button-grey h3 {
   color: rgba(31, 32, 65, 0.5);
 }
 .pay-button {
