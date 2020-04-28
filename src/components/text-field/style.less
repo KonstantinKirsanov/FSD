@@ -1,0 +1,35 @@
+.text-field div{
+    width:@input-sizing;
+    display: flex; 
+    flex-wrap: wrap;
+    & > h3:last-child{
+      color: rgba(31, 32, 65, 0.5);
+      margin-left: auto;
+      font-weight: normal;
+    }
+  }
+  .text-field_hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  .form__input {
+    width: @input-sizing;
+    height: 44px;
+    padding: 13px;
+    padding-left: 15px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 5px;
+
+    color: rgba(31, 32, 65, 0.25);
+    &:hover, &:focus {
+        border: 1px solid rgba(31, 32, 65, 0.5); 
+        color: rgba(31, 32, 65, 0.75);
+    }
+  }
+
+  .dark_border {
+    border: 1px solid rgba(31, 32, 65, 0.50) !important;
+  }

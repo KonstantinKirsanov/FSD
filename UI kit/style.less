@@ -52,7 +52,7 @@ body {
     font-style: normal;
     font-weight: normal;
   }
-  header {
+  .header-logo {
     padding: 30px;
     margin-bottom: 33px;
     width: calc(100%-30px);
@@ -163,6 +163,7 @@ body {
 .left-column > div {
   margin-bottom: 20px;
 }
+
 .form-elements-wrap {
   margin-left: 140px;
   margin-right: 140px;
@@ -174,6 +175,8 @@ body {
 .checkbox-column {
   margin: 0 30px;
 }
+
+
   .text-field div{
     width:@input-sizing;
     display: flex; 
@@ -184,8 +187,12 @@ body {
       font-weight: normal;
     }
   }
-
+  .text-field_hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.75);
+  }
   
+
   .form__input {
     width: @input-sizing;
     height: 44px;
@@ -203,10 +210,7 @@ body {
     }
   }
 
-  .text-field_hover {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    color: rgba(31, 32, 65, 0.75);
-  }
+  
 
   /* -----------Dropdown--------*/
 
@@ -285,16 +289,18 @@ body {
     margin-left: auto;
   }
   
-  /* --------Dropdown-------- */
+  /* --------Date Dropdown-------- */
   .dark_border {
     border: 1px solid rgba(31, 32, 65, 0.50) !important;
   }
   span {
-
     text-align: center;
     color: rgba(31, 32, 65, 0.5);
   }
 
+  .flex-blocks {
+    display: flex;
+  }
   .date-dropdown {
     width: 150px ;
     height: 44px;
@@ -315,9 +321,7 @@ body {
     }
   }
 
-  .flex-blocks {
-    display: flex;
-  }
+  
 
   .date-dropdown-block {
     width: 150px ;
@@ -360,7 +364,7 @@ body {
   }
 
 
-  .subscription-text-field h3 {
+.subscription-text-field h3 {
     color: #1F2041 ;
     margin-left: 0 ;
     font-weight: bold ;
@@ -657,8 +661,6 @@ body {
   
 }
 }
-
-
 
 .like-button input[type="checkbox"]:checked + label::before {
     background: @main-gradient;
