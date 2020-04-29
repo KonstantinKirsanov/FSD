@@ -1,0 +1,15 @@
+mixin date-dropdown(tex1,inside)
+    .date-dropdown-block
+        div
+            h3=tex1
+        .date-dropdown
+            p=inside
+            <span class="material-icons">expand_more</span>
+
+mixin filter-date-dropdown(tex1,inside)
+    .filter-date-dropdown
+        div
+            h3=tex1
+        .filter-date-dropdown__dropdown
+            p=inside
+            <span class="material-icons">expand_more</span>
