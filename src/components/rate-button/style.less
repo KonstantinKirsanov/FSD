@@ -1,47 +1,49 @@
+// main: ../../css/style.less
+
 .rate-button {
-    display: flex;
-    margin-right: 20px;
-    & span {
-      font-size: 24px;
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -o-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
-      -o-text-fill-color: transparent;
-    }
+  display: flex;
+  margin-right: 20px;
+  & span {
+    font-size: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
   }
-  .rate-button input[type="checkbox"] {
+}
+.rate-button input[type="checkbox"] {
+  display: none;
+}
+
+.rate-button label {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  & .fas {
     display: none;
   }
-  
-  .rate-button label {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    & .fas {
-      display: none;
-    }
+}
+
+
+.rate-button input[type="checkbox"]:checked + label {
+  & span {
+    background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
   }
-  
-  
-  .rate-button input[type="checkbox"]:checked + label {
-    & span {
-      background:  linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -o-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
-      -o-text-fill-color: transparent;
-    }
-    & .far {
-      display: none;
-    }
-    & .fas {
-      display: inline;
-    }
+  & .far {
+    display: none;
   }
+  & .fas {
+    display: inline;
+  }
+}

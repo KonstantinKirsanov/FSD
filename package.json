@@ -23,6 +23,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^3.5.2",
+    "jquery": "^3.5.0",
     "path": "^0.12.7",
     "pug": "^2.0.4",
     "style-loader": "^1.1.4",
@@ -30,7 +31,5 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "dependencies": {
-    "jquery": "^3.5.0"
-  }
+  "dependencies": {}
 }

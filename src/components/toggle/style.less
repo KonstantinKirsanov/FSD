@@ -1,58 +1,60 @@
+// main: ../../css/style.less
+
 .toggles {
     margin-bottom: 14px;
-  }
-  .toggles input[type="checkbox"] {
-    display: none;
-  }
-  
-  .toggles label {
-    position: relative;
-    display: inline-block;
-    padding-left: 22px;
-    margin-left: 30px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.5);
-  }
-  
-  .toggles label::before,
-  .toggles label::after {
-    position: absolute;
-    content: "";
-    display: inline-block; 
-  }
-  
-  .toggles label::before{
-    width: 40px;
-    height: 20px;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 10px;
-    box-sizing: border-box;
-    left: -30px;
-    top: 3px;
-  }
-  
-  .toggles input[type="checkbox"] + label::after {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background: rgba(31, 32, 65, 0.25);
-    left: -26px;
-    top: 7px;
-  }
-  
-  .toggles input[type="checkbox"]:checked + label::after {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    left: -6px;
-    top: 7px;
-  }
-  
-  .toggles input[type="checkbox"]:checked + label::before {
-    border: 1px solid #BC9CFF;
-  }
+}
+.toggles input[type="checkbox"] {
+  display: none;
+}
+
+.toggles label {
+  position: relative;
+  display: inline-block;
+  padding-left: 22px;
+  margin-left: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.toggles label::before,
+.toggles label::after {
+  position: absolute;
+  content: "";
+  display: inline-block; 
+}
+
+.toggles label::before{
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  box-sizing: border-box;
+  left: -30px;
+  top: 3px;
+}
+
+.toggles input[type="checkbox"] + label::after {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+  left: -26px;
+  top: 7px;
+}
+
+.toggles input[type="checkbox"]:checked + label::after {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  left: -6px;
+  top: 7px;
+}
+
+.toggles input[type="checkbox"]:checked + label::before {
+  border: 1px solid #BC9CFF;
+}

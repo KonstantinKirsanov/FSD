@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url('Montserrat/Montserrat-Medium.ttf') format('truetype');
+  src: url('../components/fonts/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
   font-weight: normal;
 }
 @font-face {
   font-family: 'Montserrat';
-  src: url('Montserrat/Montserrat-Bold.ttf') format('truetype');
+  src: url('../components/fonts/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Quicksand';
-  src: url('Quicksand/Quicksand-Bold.ttf') format('truetype');
+  src: url('../components/fonts/fonts/Quicksand/Quicksand-Bold.ttf') format('truetype');
   font-weight: bold;
 }
 @font-face {
   font-family: 'Quicksand';
-  src: url('Quicksand/Quicksand-Medium.ttf') format('truetype');
+  src: url('../components/fonts/fonts/Quicksand/Quicksand-Medium.ttf') format('truetype');
   font-weight: normal;
 }
 body {
@@ -371,7 +371,7 @@ button {
   width: 44px;
   text-align: center;
   left: -15%;
-  top: 7px;
+  top: 8px;
   position: relative;
   z-index: 1;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
