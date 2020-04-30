@@ -745,7 +745,7 @@ html .ui-button.ui-state-disabled:active {
 .button-3 h3 {
   color: #BC9CFF;
 }
-.button-grey h3 {
+.button-3_grey h3 {
   color: rgba(31, 32, 65, 0.5);
 }
 .pay-button {
@@ -833,21 +833,24 @@ html .ui-button.ui-state-disabled:active {
 .flex-blocks {
   display: flex;
 }
-.left-column > div {
+.left-column-wrapper > div {
   margin-bottom: 20px;
 }
-.right-column > h3 {
+.right-column > div > h3 {
   margin-bottom: 16px;
 }
 .center-column > div {
   margin-bottom: 40px;
 }
-.center-column h3 {
+.center-column > div > h3 {
   margin-bottom: 16px;
 }
 .block-range-slider {
   margin-bottom: 43.5px;
 }
-.row-wraper {
+.row-wrapper {
   margin-top: 40px;
+}
+.button-wrapper {
+  margin-bottom: 30px;
 }

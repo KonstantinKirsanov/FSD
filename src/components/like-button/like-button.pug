@@ -1,0 +1,17 @@
+- var id_like_btn=0;
+mixin like-button(text,status)
+    - for (var x = 0; x < 1; x++, id_like_btn++)
+        if(status)
+            .like-button
+                input(type="checkbox", checked="checked", id="like-" + id_like_btn)
+                label(for="like-" + id_like_btn)
+                    <span class="material-icons fas">favorite</span>
+                    <span class="material-icons far">favorite_border</span>
+                    span=text
+        else
+            .like-button
+                input(type="checkbox", id="like-" + id_like_btn)
+                label(for="like-" + id_like_btn)
+                    <span class="material-icons fas">favorite</span>
+                    <span class="material-icons far">favorite_border</span>
+                    span=text

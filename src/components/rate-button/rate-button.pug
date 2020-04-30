@@ -1,0 +1,15 @@
+- var id_star_btn=0;
+mixin rate-button(rate)
+    - for (var x = 0; x < 1; x++, id_star_btn++)
+        .rate-button
+            - for (var y = 1; y < 6; y++)
+                if(rate>=y)
+                    input(type="checkbox", checked="checked", id="star-" + id_star_btn + "-" + y)
+                    label(for="star-" + id_star_btn + "-" + y)
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>
+                else
+                    input(type="checkbox", id="star-" + id_star_btn + "-" + y)
+                    label(for="star-" + id_star_btn + "-" + y)
+                        <span class="material-icons far">star_border</span>
+                        <span class="material-icons fas">star</span>

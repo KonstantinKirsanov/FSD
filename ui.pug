@@ -3,6 +3,14 @@ include src/components/text-field/text-field.pug
 include src/components/dropdown/dropdown.pug
 include src/components/date-dropdown/date-dropdown.pug
 include src/components/sub-text-field/sub-text-field.pug
+include src/components/checkbox-button/checkbox-button.pug
+include src/components/radio-button/radio-button.pug
+include src/components/like-button/like-button.pug
+include src/components/toggle/toggle.pug
+include src/components/rate-button/rate-button.pug
+include src/components/buttons/buttons.pug
+include src/components/pagination/pagination.pug
+
 
 doctype html
 html(lang="en")
@@ -11,6 +19,8 @@ html(lang="en")
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     script
       include src/components/range-slider/index.js
   body
@@ -27,7 +37,7 @@ html(lang="en")
       include src/components/type/type.pug
     include src/components/logo-header/logo-header.pug
     div.wraper
-      .left-column
+      .left-column-wrapper
         +text-field('text field','default','email','Email')
         .text-field
           div
@@ -36,10 +46,56 @@ html(lang="en")
           <input type="text" class="text-field_hover form__input" placeholder="This is pretty awesome">
         +dropdown-demo('dropdown','default','Сколько гостей')
         +text-field('masked text field','default','date','ДД.ММ.ГГГГ')
-        .flex-blocks.row-wraper
+        .flex-blocks.row-wrapper
           +date-dropdown('date dropdown','ДД.ММ.ГГГГ')
           +date-dropdown('date dropdown','19.08.2019')
-        .row-wraper
+        .row-wrapper
           +filter-date-dropdown('filter date dropdown','19 авг - 23 авг')
-        .row-wraper
+        .row-wrapper
           +sub-text-field('subscription text field','email','Email')
+      .center-column
+        div
+          h3 checkbox buttons
+          +checkbox-button('Можно курить')
+          +checkbox-button('Можно с питомцами','true')
+          +checkbox-button('Можно пригласить гостей (до 10 человек)','true')
+        div
+          h3 radio buttons
+          .flex-blocks
+            +radio-button('Мужчина','true')
+            +radio-button('Женщина')
+        div
+          h3 toggle
+          +toggle('Получать спецпредложения','true')
+          +toggle('Получать спецпредложения')
+        div
+          h3 like button
+          .flex-blocks.like-block
+            +like-button('2')
+            +like-button('12','true')
+        div
+          h3 rate button
+          .flex-blocks
+            +rate-button('4')
+            +rate-button('5')
+      .right-column
+        include src/components/range-slider/range-slider.pug
+        div
+          h3 buttons
+          .flex-blocks.button-wrapper
+            +button_1('click me')
+            +button_1('click me','disabled')
+          .flex-blocks.button-wrapper
+            +button_2('click me')
+            +button_2('click me','disabled')
+          .flex-blocks.button-wrapper
+            +button_3('click me')
+            +button_3('click me','grey')
+          +pay-button('перейти к оплате')
+          h3 pagination
+          .button-wrapper
+            +pagination('1','15')
+            <p>1-12 из 100+ вариантов аренды</p>
+
+
+        

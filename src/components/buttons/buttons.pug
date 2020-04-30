@@ -1,0 +1,33 @@
+- var button_id=0;
+mixin button_1(text,status)
+    - for (var x = 0; x < 1; x++, button_id++)
+        if(status)
+            button.button-1.disabled(id="button_id-" + button_id)
+                h3=text
+        else
+            button.button-1(id="button_id-" + button_id)
+                h3=text
+
+mixin button_2(text,status)
+    - for (var x = 0; x < 1; x++, button_id++)
+        if(status)
+            button.button-2.button-2_disabled(id="button_id-" + button_id)
+                h3=text
+        else
+            button.button-2(id="button_id-" + button_id)
+                h3=text
+
+mixin button_3(text,status)
+    - for (var x = 0; x < 1; x++, button_id++)
+        if(status)
+            button.button-3.button-3_grey(id="button_id-" + button_id)
+                h3=text
+        else
+            button.button-3(id="button_id-" + button_id)
+                h3=text
+
+mixin pay-button(text)
+    - for (var x = 0; x < 1; x++, button_id++)
+        button(class="pay-button", type="button", id="button_id-" + button_id)
+            h3=text
+                <span class="material-icons">arrow_forward</span>

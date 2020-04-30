@@ -1,0 +1,10 @@
+mixin pagination(x,y)
+    .pagination
+        button.pagination-item.pagination-item_active=x
+        - for (var u = 0; u < 1; u++, x++)
+            button.pagination-item=x
+        - for (var u = 0; u < 1; u++, x++)
+            button.pagination-item=x
+        p.pagination-dots ...
+        button.pagination-item=y
+        <button class="pagination-item pagination-item_last"><span class="material-icons">arrow_forward</span></button>

@@ -1,0 +1,11 @@
+- var id_radio_btn=0;
+mixin radio-button(text,status)
+    - for (var x = 0; x < 1; x++, id_radio_btn++)
+        if(status)
+            .radio-buttons
+                input(type="checkbox", checked="checked", id="radio-buttons-" + id_radio_btn)
+                label(for="radio-buttons-" + id_radio_btn)=text
+        else
+            .radio-buttons
+                input(type="checkbox", id="radio-buttons-" + id_radio_btn)
+                label(for="radio-buttons-" + id_radio_btn)=text

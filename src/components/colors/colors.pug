@@ -1,6 +1,7 @@
-- var id=0;
+- var id_color_row=0;
 mixin color-row(name,code)
-    div(id=id++, class="color-row color-row-" + id)
-        div
-            h2.color-name=name
-            p.color-code=code
+    - for (var x = 0; x < 1; x++, id_color_row++)
+        div(class="color-row color-row-" + id_color_row)
+            div
+                h2.color-name=name
+                p.color-code=code

@@ -13,4 +13,4 @@ $( function() {
     });
     $( "#amount" ).val($( "#slider-range" ).slider( "values", 0 ).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + "₽" +
       " - " + $( "#slider-range" ).slider( "values", 1 ).toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + "₽" );
-  } );
+} );

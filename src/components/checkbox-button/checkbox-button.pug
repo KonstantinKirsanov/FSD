@@ -1,0 +1,11 @@
+- var id_checkbox_btn=0;
+mixin checkbox-button(text,status)
+    - for (var x = 0; x < 1; x++, id_checkbox_btn++)
+        if(status)
+            .checkbox
+                input(type="checkbox", checked="checked", id="checkbox-" + id_checkbox_btn)
+                label(for="checkbox-" + id_checkbox_btn)=text
+        else
+            .checkbox
+                input(type="checkbox", id="checkbox-" + id_checkbox_btn)
+                label(for="checkbox-" + id_checkbox_btn)=text

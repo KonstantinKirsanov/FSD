@@ -1,0 +1,11 @@
+- var id_toggle_btn=0;
+mixin toggle(text,status)
+    - for (var x = 0; x < 1; x++, id_toggle_btn++)
+        if(status)
+            .toggles
+                input(type="checkbox", checked="checked", id="toggle-" + id_toggle_btn)
+                label(for="toggle-" + id_toggle_btn)=text
+        else
+            .toggles
+                input(type="checkbox", id="toggle-" + id_toggle_btn)
+                label(for="toggle-" + id_toggle_btn)=text
