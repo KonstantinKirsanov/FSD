@@ -1,5 +1,7 @@
 // main: ../../css/style.less
 
+@border-width: 2px;
+
 .button-1 {
   width: 99px;
   height: 44px;
@@ -16,8 +18,8 @@
   border-radius: 30px;
   background: #fff;
   text-align: center;
-  margin-top: 1px;
-  margin-left: 1px;
+  margin-top: @border-width;
+  margin-left: @border-width;
   & h3 {
     color: #BC9CFF;
     z-index: 1;
@@ -25,10 +27,10 @@
   &::before {
   content: "";
   position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
-  right: -1px;
+  top: -@border-width;
+  bottom: -@border-width;
+  left: -@border-width;
+  right: -@border-width;
   background: @main-gradient;
   border-radius: 34px;
   z-index: -1;
