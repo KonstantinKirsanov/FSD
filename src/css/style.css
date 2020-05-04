@@ -79,6 +79,7 @@ label {
 button {
   outline: none;
   cursor: pointer;
+  padding: 0;
 }
 button:active {
   box-shadow: 0 0 5px rgba(94, 88, 129, 0.5);
@@ -264,7 +265,7 @@ button {
 }
 .dropdown__content > div {
   display: flex;
-  margin-bottom: 22px;
+  margin-bottom: 7px;
 }
 .dropdown__content > div h3 {
   display: flex;
@@ -283,6 +284,7 @@ button {
 }
 .dropdown-btn_disabled {
   opacity: 0.5;
+  cursor: not-allowed;
 }
 .dropdown__content__btns-block {
   width: 92px;
@@ -855,4 +857,23 @@ html .ui-button.ui-state-disabled:active {
 }
 .button-wrapper {
   margin-bottom: 30px;
+}
+.disappeared {
+  display: none;
+}
+.show {
+  display: block;
+}
+.box-shadow {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+.box-shadow_none {
+  box-shadow: none;
+}
+.appear {
+  display: block;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
 }
