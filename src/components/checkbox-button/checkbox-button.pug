@@ -9,3 +9,37 @@ mixin checkbox-button(text,status)
             .checkbox
                 input(type="checkbox", id="checkbox-" + id_checkbox_btn)
                 label(for="checkbox-" + id_checkbox_btn)=text
+
+mixin expand-checkbox-list(text,hide)
+    .expand-checkbox-list__header(onclick="expand_checkbox_dropdown()")
+        h3=text
+        <span class="material-icons" id="expand-checkbox-list__span">expand_more</span>
+    if (hide)
+        .disappeared#expand-checkbox-dropdown
+            +checkbox-button("Завтрак")
+            +checkbox-button("Письменный стол", true)
+            +checkbox-button("Стул для кормления", true)
+            +checkbox-button("Кроватка", true)
+            +checkbox-button("Телевизо")
+            +checkbox-button("Шампунь")
+    else
+        #expand-checkbox-dropdown
+            +checkbox-button("Завтрак")
+            +checkbox-button("Письменный стол", true)
+            +checkbox-button("Стул для кормления", true)
+            +checkbox-button("Кроватка", true)
+            +checkbox-button("Телевизо")
+            +checkbox-button("Шампунь")
+
+mixin rich-checkbox-button(text,text2,status)
+    - for (var x = 0; x < 1; x++, id_checkbox_btn++)
+        if(status)
+            .checkbox.rich_checkbox__top-text
+                input(type="checkbox", checked="checked", id="checkbox-" + id_checkbox_btn)
+                label(for="checkbox-" + id_checkbox_btn)=text
+                    .rich_checkbox__bottom-text=text2
+        else
+            .checkbox.rich_checkbox__top-text
+                input(type="checkbox", id="checkbox-" + id_checkbox_btn)
+                label(for="checkbox-" + id_checkbox_btn )=text
+                    .rich_checkbox__bottom-text=text2

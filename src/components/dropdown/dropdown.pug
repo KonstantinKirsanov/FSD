@@ -8,15 +8,15 @@ mixin dropdown-demo(text1,text2,inside)
             <span class="material-icons">expand_more</span>
 
 mixin dropdown-room_not-hidden()
-    <div>
-        <div class="dropdown-room box-shadow">
-            <div class="dropdown__text">
-                <h3>dropdown</h3>
-                <h3>EXPANDED</h3>
-            </div>
+    <div class="dropdown-room">
+        <div class="dropdown__text">
+            <h3>dropdown</h3>
+            <h3>EXPANDED</h3>
+        </div>
+        .box-shadow#box_shadow
             <div class="dropdown__field">
                 <p class="dropdown__field__total-text">2 спальни, 2 кровати...</p>
-                <span class="material-icons" onclick="dropdown_hide(dropdown__content_not_hidden)">expand_more</span>
+                <span class="material-icons" onclick="dropdown_hide(dropdown__content_not_hidden, box_shadow)">expand_more</span>
             </div>
             <div class="dropdown__content" id="dropdown__content_not_hidden">
                 <div>
@@ -44,19 +44,19 @@ mixin dropdown-room_not-hidden()
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
+
 mixin dropdown-room_hiden()
-    <div>
-        <div class="dropdown-room">
-            <div class="dropdown__text">
-                <h3>dropdown</h3>
-                <h3>EXPANDED</h3>
-            </div>
+    <div class="dropdown-room">
+        <div class="dropdown__text">
+            <h3>dropdown</h3>
+            <h3>EXPANDED</h3>
+        </div>
+        #box_shadow_hide
             <div class="dropdown__field">
                 <p class="dropdown__field__total-text">2 спальни, 2 кровати...</p>
-                <span class="material-icons" onclick="dropdown_appear(dropdown__content_hiden)">expand_more</span>
+                <span class="material-icons" onclick="dropdown_appear(dropdown__content_hiden, box_shadow_hide)">expand_more</span>
             </div>
             <div class="dropdown__content disappeared" id="dropdown__content_hiden">
                 <div>
@@ -84,50 +84,52 @@ mixin dropdown-room_hiden()
                     </div>
                 </div>
             </div>
-        </div>
     </div>
+
 
 //-----------------------------next block-----------------------------------------------//
 
-mixin dropdown-guests_not-hidden()
+mixin dropdown-guests_not-hidden(text,number1,number2,number3)
     <div class="dropdown-guests">
         <div>
             <h3>dropdown</h3>
         </div>
-        <div class="box-shadow">
+        .box-shadow#dropdown_guests_box_shadow
             <div class="dropdown__field">
-            <p>Сколько гостей</p>
-            <span class="material-icons">expand_more</span>
-        </div>
-        <div class="dropdown__content">
-            <div>
-                <h3>взрослые</h3>
-                <div class="dropdown__content__btns-block">
-                    <button class="dropdown-btn dropdown-btn_disabled">-</button>
-                    <h3>0</h3>
-                    <button class="dropdown-btn">+</button>
+                p#dropdown-guests__total-count=text
+                <span class="material-icons" onclick="dropdown_hide(dropdown_guest_content_hide, dropdown_guests_box_shadow)">expand_more</span>
+            </div>
+            <div class="dropdown-guest__content" id="dropdown_guest_content_hide">
+                <div>
+                    <h3>взрослые</h3>
+                    <div class="dropdown__content__btns-block">
+                        <button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-3_minus" onclick="dropdown_guest(3, false)">-</button>
+                        h3#dropdown-room__text-3=number1
+                        <button class="dropdown-btn" id="dropdown-room__btn-3_plus" onclick="dropdown_guest(3, true)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>дети</h3>
+                    <div class="dropdown__content__btns-block">
+                        <button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-4_minus" onclick="dropdown_guest(4, false)">-</button>
+                        h3#dropdown-room__text-4=number2
+                        <button class="dropdown-btn" id="dropdown-room__btn-4_plus" onclick="dropdown_guest(4, true)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>младенцы</h3>
+                    <div class="dropdown__content__btns-block">
+                        <button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-5_minus" onclick="dropdown_guest(5, false)">-</button>
+                        h3#dropdown-room__text-5=number3
+                        <button class="dropdown-btn" id="dropdown-room__btn-5_plus" onclick="dropdown_guest(5, true)">+</button>
+                    </div>
+                </div>
+                <div class="space-between">
+                    if ((number1+number2+number3)>0)
+                        <button class="button-3 button-3_grey" onclick="dropdown_guest_clear()" id="dropdown_guest_clear_btn" ><h3>очистить</h3></button>
+                    else
+                        <button class="button-3 button-3_grey hidden" onclick="dropdown_guest_clear()" id="dropdown_guest_clear_btn" ><h3>очистить</h3></button>
+                    <button class="button-3" onclick="dropdown_guest_aply()"><h3>применить</h3></button>
                 </div>
             </div>
-            <div>
-                <h3>дети</h3>
-                <div class="dropdown__content__btns-block">
-                    <button class="dropdown-btn dropdown-btn_disabled">-</button>
-                    <h3>0</h3>
-                    <button class="dropdown-btn">+</button>
-                </div>
-            </div>
-            <div>
-                <h3>младенцы</h3>
-                <div class="dropdown__content__btns-block">
-                    <button class="dropdown-btn dropdown-btn_disabled">-</button>
-                    <h3>0</h3>
-                    <button class="dropdown-btn">+</button>
-                </div>
-            </div>
-            <div class="space-between">
-                <button class="button-3 button-3_grey"><h3>очистить</h3></button>
-                <button class="button-3"><h3>применить</h3></button>
-            </div>
-        </div>
-        </div>  
     </div>

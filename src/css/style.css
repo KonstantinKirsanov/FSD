@@ -274,6 +274,26 @@ button {
 .dropdown__content > div:last-child {
   margin-bottom: 0;
 }
+.dropdown-guest__content {
+  padding: 7px 7px 13px 15px;
+  display: block;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: 0;
+}
+.dropdown-guest__content > div {
+  display: flex;
+  margin-bottom: 7px;
+}
+.dropdown-guest__content > div h3 {
+  display: flex;
+  align-items: center;
+}
+.dropdown-guest__content > div:last-child {
+  margin-top: 19px;
+  margin-bottom: 0;
+}
 .dropdown-btn {
   width: 30px;
   height: 30px;
@@ -292,6 +312,31 @@ button {
   justify-content: space-between;
   margin-left: auto;
 }
+.box-shadow_none {
+  box-shadow: none;
+}
+/* 
+.disappeared {
+  display: none;
+}
+
+.box-shadow {
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.appear {
+  display: block;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  visibility: hidden;
+}
+*/
 .date-dropdown {
   width: 150px ;
   height: 44px;
@@ -442,6 +487,41 @@ button {
 }
 .checkbox input[type="checkbox"]:checked + label::before {
   border: 1px solid #BC9CFF;
+}
+.icons-rotate {
+  transform: rotate(-180deg);
+}
+.expand-checkbox-list__header {
+  width: 266px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.expand-checkbox-list__header > span {
+  width: 44px;
+}
+.rich_checkbox__top-text > label {
+  text-transform: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 236px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.rich_checkbox__bottom-text {
+  text-transform: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  width: 236px;
+  margin-top: 5px;
+  color: rgba(31, 32, 65, 0.5);
 }
 .radio-buttons {
   margin-right: 20px;
@@ -708,13 +788,11 @@ html .ui-button.ui-state-disabled:active {
   height: 44px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-  margin-right: 20px;
 }
 .button-2 {
   position: relative;
   width: 97px;
   height: 42px;
-  margin-right: 21px;
   border-radius: 30px;
   background: #fff;
   text-align: center;
@@ -744,7 +822,6 @@ html .ui-button.ui-state-disabled:active {
 }
 .button-3 {
   background-color: #ffffff;
-  margin-right: 20px;
 }
 .button-3 h3 {
   color: #BC9CFF;
@@ -758,7 +835,6 @@ html .ui-button.ui-state-disabled:active {
   height: 44px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   border-radius: 22px;
-  margin-bottom: 40px;
 }
 .pay-button h3 {
   display: flex;
@@ -819,9 +895,75 @@ html .ui-button.ui-state-disabled:active {
   width: 40px;
   height: 40px;
 }
-.wraper {
+.bullet-list {
+  position: relative;
+  margin-bottom: 10px;
+  width: 270px;
+}
+.bullet-list > p {
+  margin-left: 20px;
+}
+.bullet-list::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+}
+.pluses {
   display: flex;
+  position: relative;
+  width: 280px;
+  margin-bottom: 40px;
+}
+.pluses::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 65px;
+  width: 100%;
+  height: 1px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+}
+.pluses__icon-block {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pluses-icon {
+  color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-size: 48px;
+}
+.pluses__text {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  padding: 3px 0;
+}
+.pluses__text__header {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.pluses__text__footer {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.wraper {
   margin: 0 140px 140px;
 }
 .form-elements-wrap {
@@ -861,14 +1003,8 @@ html .ui-button.ui-state-disabled:active {
 .disappeared {
   display: none;
 }
-.show {
-  display: block;
-}
 .box-shadow {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-}
-.box-shadow_none {
-  box-shadow: none;
 }
 .appear {
   display: block;
@@ -876,4 +1012,15 @@ html .ui-button.ui-state-disabled:active {
 .space-between {
   display: flex;
   justify-content: space-between;
+}
+.hidden {
+  visibility: hidden;
+}
+.block-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.h3-margin {
+  margin-bottom: 16px;
 }

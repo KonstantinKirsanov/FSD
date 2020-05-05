@@ -14,14 +14,14 @@
 @import "../components/range-slider/style.less";
 @import "../components/buttons/style.less";
 @import "../components/pagination/style.less";
+@import "../components/bullet-list/style.less";
+@import "../components/pluses/style.less";
 
 @main-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 @input-sizing: 320px;
 @dropdown-sizing: 150px;
 
 .wraper {
-    display: flex;
-    justify-content: space-between;
     margin: 0 140px 140px;
 }
 
@@ -74,16 +74,8 @@
   display: none;
 }
 
-.show {
-  display: block;
-}
-
 .box-shadow {
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-}
-
-.box-shadow_none {
-  box-shadow: none;
 }
 
 .appear {
@@ -94,4 +86,19 @@
   display: flex;
   justify-content: space-between;
 }
+
+.hidden {
+  visibility: hidden;
+}
+
+.block-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.h3-margin {
+  margin-bottom: 16px;
+}
+
 

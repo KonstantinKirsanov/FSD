@@ -10,6 +10,8 @@ include src/components/toggle/toggle.pug
 include src/components/rate-button/rate-button.pug
 include src/components/buttons/buttons.pug
 include src/components/pagination/pagination.pug
+include src/components/bullet-list/bullet-list.pug
+include src/components/pluses/pluses.pug
 
 
 doctype html
@@ -24,6 +26,7 @@ html(lang="en")
     <script src="src/components/range-slider/index.js"></script>
     <script src="src/components/rate-button/rate-button.js"></script>
     <script src="src/components/dropdown/dropdown.js"></script>
+    <script src="src/components/checkbox-button/checkbox-button.js"></script>
   body
     include src/components/logo-header/logo-header.pug
     div.wraper
@@ -38,71 +41,91 @@ html(lang="en")
       include src/components/type/type.pug
     include src/components/logo-header/logo-header.pug
     div.wraper
-      .left-column-wrapper
-        +text-field('text field','default','email','Email')
-        .text-field
+      .block-wrapper
+        .left-column-wrapper
+          +text-field('text field','default','email','Email')
+          .text-field
+            div
+                h3 text field
+                h3 hover / focus
+            <input type="text" class="text-field_hover form__input" placeholder="This is pretty awesome">
+          +dropdown-demo('dropdown','default','Сколько гостей')
+          +text-field('masked text field','default','date','ДД.ММ.ГГГГ')
+          .flex-blocks.row-wrapper
+            +date-dropdown('date dropdown','ДД.ММ.ГГГГ')
+            +date-dropdown('date dropdown','19.08.2019')
+          .row-wrapper
+            +filter-date-dropdown('filter date dropdown','19 авг - 23 авг')
+          .row-wrapper
+            +sub-text-field('subscription text field','email','Email')
+        .center-column
           div
-              h3 text field
-              h3 hover / focus
-          <input type="text" class="text-field_hover form__input" placeholder="This is pretty awesome">
-        +dropdown-demo('dropdown','default','Сколько гостей')
-        +text-field('masked text field','default','date','ДД.ММ.ГГГГ')
-        .flex-blocks.row-wrapper
-          +date-dropdown('date dropdown','ДД.ММ.ГГГГ')
-          +date-dropdown('date dropdown','19.08.2019')
+            h3 checkbox buttons
+            +checkbox-button('Можно курить')
+            +checkbox-button('Можно с питомцами',true)
+            +checkbox-button('Можно пригласить гостей (до 10 человек)',true)
+          div
+            h3 radio buttons
+            .flex-blocks
+              +radio-button('Мужчина',true)
+              +radio-button('Женщина')
+          div
+            h3 toggle
+            +toggle('Получать спецпредложения',true)
+            +toggle('Получать спецпредложения')
+          div
+            h3 like button
+            .flex-blocks.like-block
+              +like-button('2')
+              +like-button('12','true')
+          div
+            h3 rate button
+            .flex-blocks
+              +rate-button('4')
+              +rate-button('5')
+        .right-column
+          include src/components/range-slider/range-slider.pug
+          div
+            h3 buttons
+            .flex-blocks.button-wrapper
+              +button_1('click me')
+              +button_1('click me','disabled')
+            .flex-blocks.button-wrapper
+              +button_2('click me')
+              +button_2('click me','disabled')
+            .flex-blocks.button-wrapper
+              +button_3('click me')
+              +button_3('click me','grey')
+            +pay-button('перейти к оплате')
+            h3 pagination
+            .button-wrapper
+              +pagination('1','15')
+              <p>1-12 из 100+ вариантов аренды</p>
+
+      .block-wrapper
+        .left-column-wrapper
+          +dropdown-room_hiden
+          +dropdown-room_not-hidden
+        +dropdown-guests_not-hidden("Сколько гостей",0,0,0)
+        +dropdown-guests_not-hidden("3 гостя",2,1,0)
+      .block-wrapper
         .row-wrapper
-          +filter-date-dropdown('filter date dropdown','19 авг - 23 авг')
+          +expand-checkbox-list("expandable checkbox list", true)
+          +expand-checkbox-list("expandable checkbox list")
         .row-wrapper
-          +sub-text-field('subscription text field','email','Email')
-      .center-column
-        div
-          h3 checkbox buttons
-          +checkbox-button('Можно курить')
-          +checkbox-button('Можно с питомцами','true')
-          +checkbox-button('Можно пригласить гостей (до 10 человек)','true')
-        div
-          h3 radio buttons
-          .flex-blocks
-            +radio-button('Мужчина','true')
-            +radio-button('Женщина')
-        div
-          h3 toggle
-          +toggle('Получать спецпредложения','true')
-          +toggle('Получать спецпредложения')
-        div
-          h3 like button
-          .flex-blocks.like-block
-            +like-button('2')
-            +like-button('12','true')
-        div
-          h3 rate button
-          .flex-blocks
-            +rate-button('4')
-            +rate-button('5')
-      .right-column
-        include src/components/range-slider/range-slider.pug
-        div
-          h3 buttons
-          .flex-blocks.button-wrapper
-            +button_1('click me')
-            +button_1('click me','disabled')
-          .flex-blocks.button-wrapper
-            +button_2('click me')
-            +button_2('click me','disabled')
-          .flex-blocks.button-wrapper
-            +button_3('click me')
-            +button_3('click me','grey')
-          +pay-button('перейти к оплате')
-          h3 pagination
-          .button-wrapper
-            +pagination('1','15')
-            <p>1-12 из 100+ вариантов аренды</p>
-    div.wraper
-      .left-column-wrapper
-        +dropdown-room_hiden
-        +dropdown-room_not-hidden
-      +dropdown-guests_not-hidden
-      +dropdown-guests_not-hidden
+          h3.h3-margin rich bheckbox buttons
+          +rich-checkbox-button("Широкий коридор", "Ширина коридоров в номере не менее 91 см.")
+          +rich-checkbox-button("Помощник для инвалидов", "На 1 этаже вас встретит специалист и проводит до номера.")
+        .row-wrapper
+          h3.h3-margin bullet list
+          +bullet-list("Нельзя с питомцами")
+          +bullet-list("Без вечеринок и мероприятий")
+          +bullet-list("Время прибытия — после 13:00,а выезд до 12:00")
+      .block-wrapper
+        .row-wrapper
+          +pluse_comfort("Комфорт","Шумопоглощающие стены")
+          +pluse_convenience("Удобство","Окно в каждой из спален")
+      
           
 
 
