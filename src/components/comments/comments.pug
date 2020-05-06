@@ -1,0 +1,11 @@
+mixin comments(name,data,comment)
+    .comments
+        .comments__author
+            .comments__img-block
+            .comments__text
+                .comments__author__name=name
+                .comments__author__data=data
+        .comments__text-block
+            .comments__item-like
+                +like-button('12','true')
+            p.comments__text=comment
