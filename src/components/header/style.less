@@ -1,0 +1,52 @@
+// main: ../../css/style.less
+
+header {
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    position: relative;
+}
+
+.header__company {
+    margin-left: 140px;
+    display: flex;
+    align-items: center;
+}
+.header__nav {
+    margin-right: 140px;
+    display: flex;
+    align-items: center;
+    & > li {
+        margin-right: 30px;
+    }
+}
+
+.header__nav_active-page > a{
+    font-style: normal;
+    font-weight: bold;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.header__nav__dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav__user {
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &::before {
+        left: -30px;
+        width: 1px;
+        height: 30px;
+        background: rgba(31, 32, 65, 0.1);
+        position: absolute;
+        content:'';
+    }
+}

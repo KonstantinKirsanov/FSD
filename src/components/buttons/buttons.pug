@@ -31,3 +31,13 @@ mixin pay-button(text)
         button(class="pay-button", type="button", id="button_id-" + button_id)
             h3=text
                 <span class="material-icons">arrow_forward</span>
+
+mixin button_1-header(text)
+    - for (var x = 0; x < 1; x++, button_id++)
+        button.button-1.button-1-header(id="button_id-" + button_id)
+            h3=text
+
+mixin button_2-header(text)
+    - for (var x = 0; x < 1; x++, button_id++)
+        button.button-2.button-2-header(id="button_id-" + button_id)
+            h3=text

@@ -13,6 +13,8 @@ include src/components/pagination/pagination.pug
 include src/components/bullet-list/bullet-list.pug
 include src/components/pluses/pluses.pug
 include src/components/comments/comments.pug
+include src/components/header/header.pug
+include src/components/footer/footer.pug
 
 
 doctype html
@@ -22,6 +24,7 @@ html(lang="en")
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/760655fe14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="src/components/range-slider/index.js"></script>
@@ -46,7 +49,7 @@ html(lang="en")
       .block-wrapper
         .left-column-wrapper
           div.row-margin20
-            +text-field('text field','default','email','Email')
+            +text-field('email','Email','text field','default')
           .text-field.row-margin20
             div
                 h3 text field
@@ -55,14 +58,14 @@ html(lang="en")
           div.row-margin20
             +dropdown-demo('dropdown','default','Сколько гостей')
           div.row-wrapper
-            +text-field('masked text field','default','date','ДД.ММ.ГГГГ')
+            +text-field('date','ДД.ММ.ГГГГ','masked text field','default')
           .flex-blocks.row-wrapper
             +date-dropdown('date dropdown','ДД.ММ.ГГГГ')
             +date-dropdown('date dropdown','19.08.2019')
           .row-wrapper
             +filter-date-dropdown('filter date dropdown','19 авг - 23 авг')
           .row-wrapper
-            +sub-text-field('subscription text field','email','Email')
+            +sub-text-field('email','Email','subscription text field')
         div
           div.row-wrapper
             h3.h3-margin checkbox buttons
@@ -88,7 +91,7 @@ html(lang="en")
             .flex-blocks
               +rate-button('4')
               +rate-button('5')
-        .right-column
+        div
           div.row-wrapper
             include src/components/range-slider/range-slider.pug
           h3.row-wrapper buttons
@@ -108,7 +111,7 @@ html(lang="en")
           <p>1-12 из 100+ вариантов аренды</p>
 
       .block-wrapper
-        .left-column-wrapper
+        div
           div.row-margin20
             +dropdown-room_hiden
           div.row-margin20
@@ -134,8 +137,15 @@ html(lang="en")
           +pluse_convenience("Удобство","Окно в каждой из спален")
         div
           +comments("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
-      
-          
-
-
+  .page-wrapper_gray_no-side-margin
+    include src/components/logo-header/logo-header.pug
+    .row-wrapper
+      +header-not-logged("Home", "About us", "Services", "Careers", "News","Documentation")
+    .row-wrapper
+      +header-logged("Home", "About us", "Services", "Careers", "News","Documentation","Cosmin Negoita")
+    .row-wrapper
+      +footer_1()
+    .row-wrapper
+      +footer_2('Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.')
+        
         
