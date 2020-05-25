@@ -19,6 +19,8 @@
 @import "../components/comments/style.less";
 @import "../components/header/style.less";
 @import "../components/footer/style.less";
+@import "../components/cards/style.less";
+@import "../components/calendar/style.less";
 
 
 @main-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -29,10 +31,6 @@
   margin: 65px 140px 140px 140px;
 }
 .page-wrapper_gray {
-  margin: 65px 140px 140px 140px;
-  background: #F4F4F6;
-}
-.page-wrapper_gray_no-side-margin {
   padding-bottom: 130px;
   background: #F4F4F6;
 }
@@ -94,6 +92,25 @@
 .pluses-margin {
   margin-right: 155px;
 }
+
+.cards-list {
+  margin: 0 140px 0 140px;
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    margin-bottom: 40px;
+  }
+}
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
 
 
 

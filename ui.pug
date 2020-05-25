@@ -15,6 +15,8 @@ include src/components/pluses/pluses.pug
 include src/components/comments/comments.pug
 include src/components/header/header.pug
 include src/components/footer/footer.pug
+include src/components/cards/cards.pug
+include src/components/calendar/calendar.pug
 
 
 doctype html
@@ -31,6 +33,7 @@ html(lang="en")
     <script src="src/components/rate-button/rate-button.js"></script>
     <script src="src/components/dropdown/dropdown.js"></script>
     <script src="src/components/checkbox-button/checkbox-button.js"></script>
+    <script src="src/components/calendar/index.js"></script>
   body
     include src/components/logo-header/logo-header.pug
     .page-wrapper
@@ -137,7 +140,20 @@ html(lang="en")
           +pluse_convenience("Удобство","Окно в каждой из спален")
         div
           +comments("Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
-  .page-wrapper_gray_no-side-margin
+  .page-wrapper_gray
+    include src/components/logo-header/logo-header.pug
+    .cards-list
+      .flex-column
+        +room-finder-card()
+        +registration-card()
+      .flex-column
+        +room-card()
+        +login-card()
+      .flex-column
+        +calendar()
+
+
+  .page-wrapper_gray
     include src/components/logo-header/logo-header.pug
     .row-wrapper
       +header-not-logged("Home", "About us", "Services", "Careers", "News","Documentation")
