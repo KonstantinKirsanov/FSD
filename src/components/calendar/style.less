@@ -1,7 +1,11 @@
 @range-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
 @range-color_hover: linear-gradient(180deg, rgba(187, 156, 255, 0.4) 0%, rgba(139, 165, 249, 0.4) 100%);
 
-
+.datepicker--footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 .datepicker-here {
   display: none;
 }
@@ -231,7 +235,7 @@
 .datepicker {
   border-radius: 4px;
   box-sizing: content-box;
-  font-family: Tahoma, sans-serif;
+  font-family: 'Montserrat';
   font-size: 14px;
   color: rgba(31, 32, 65, 0.5);
   width: 280px;
@@ -361,6 +365,11 @@
 
 .datepicker--nav-title,
 .datepicker--nav-action {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -372,9 +381,16 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+.calendar-arrow {
+  font-size: 24px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #BC9CFF;
+}
 .datepicker--nav-action {
-  width: 32px;
-  border-radius: 4px;
+
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -389,7 +405,8 @@
   .datepicker--nav-action path {
     fill: none;
     stroke: #9c9c9c;
-    stroke-width: 2px; }
+    stroke-width: 2px; 
+  }
 
 .datepicker--nav-title {
   border-radius: 4px;

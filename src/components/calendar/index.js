@@ -9,6 +9,10 @@
             '<i class="datepicker--pointer"></i>' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
+            '<div class="datepicker--footer">' + 
+            '<button class="button-3 button-3_grey" id="button-datepicker-clear"><h3>очистить</h3></button>' +
+            '<button class="button-3" id="button-datepicker-accept"><h3>применить</h3></button>' +
+            '</div>' +
             '</div>',
         defaults = {
             classes: '',
@@ -53,8 +57,8 @@
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<span class="material-icons">arrow_back</span>',
-            nextHtml: '<span class="material-icons">arrow_forward</span>',
+            prevHtml: '<span class="material-icons calendar-arrow">arrow_back</span>',
+            nextHtml: '<span class="material-icons calendar-arrow">arrow_forward</span>',
             navTitles: {
                 days: 'MM yyyy',
                 months: 'yyyy',
