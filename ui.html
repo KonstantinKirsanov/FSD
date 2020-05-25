@@ -1,13 +1,14 @@
 <!DOCTYPE html><html lang="en"><head><title></title><meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="src/css/style.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://kit.fontawesome.com/760655fe14.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="src/components/range-slider/index.js"></script>
 <script src="src/components/rate-button/rate-button.js"></script>
 <script src="src/components/dropdown/dropdown.js"></script>
-<script src="src/components/checkbox-button/checkbox-button.js"></script></head><body><div class="header-logo">
+<script src="src/components/checkbox-button/checkbox-button.js"></script>
+<script src="src/components/calendar/index.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></head><body><div class="header-logo">
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
 <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
@@ -192,7 +193,69 @@
 </linearGradient>
 </defs>
 </svg></div><div class="pluses__text"><div class="pluses__text__header">Удобство</div><div class="pluses__text__footer">Окно в каждой из спален</div></div></div></div><div><div class="comments"><div class="comments__author"><div class="comments__img-block"></div><div class="comments__text"><div class="comments__author__name">Мурад Сарафанов</div><div class="comments__author__data">5 дней назад</div></div></div><div class="comments__text-block"><div class="comments__item-like"><div class="like-button"><input type="checkbox" checked="checked" id="like-2"/><label for="like-2"><span class="material-icons fas">favorite</span>
-<span class="material-icons far">favorite_border</span><span>12</span></label></div></div><p class="comments__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p></div></div></div></div></div></body><div class="page-wrapper_gray_no-side-margin"><div class="header-logo">
+<span class="material-icons far">favorite_border</span><span>12</span></label></div></div><p class="comments__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p></div></div></div></div></div></body><div class="page-wrapper_gray"><div class="header-logo">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+<path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+</svg>
+</div> <div class="cards-list"><div class="flex-column"><div class="cards-wrapper"><h1>Найдём номера под ваши пожелания</h1><div class="flex-blocks row-wrapper"><div class="date-dropdown-block"><div><h3>Прибытие</h3></div><div class="date-dropdown"><p>ДД.ММ.ГГГГ</p><span class="material-icons">expand_more</span></div></div><div class="date-dropdown-block"><div><h3>Выезд</h3></div><div class="date-dropdown"><p>ДД.ММ.ГГГГ</p><span class="material-icons">expand_more</span></div></div></div><div class="dropdown-guests">
+<div>
+<h3>dropdown</h3>
+</div><div class="box-shadow" id="dropdown_guests_box_shadow"><div class="dropdown__field"><p id="dropdown-guests__total-count">Сколько гостей</p><span class="material-icons" onclick="dropdown_hide(dropdown_guest_content_hide, dropdown_guests_box_shadow)">expand_more</span>
+</div>
+<div class="dropdown-guest__content" id="dropdown_guest_content_hide">
+<div>
+<h3>взрослые</h3>
+<div class="dropdown__content__btns-block">
+<button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-3_minus" onclick="dropdown_guest(3, false)">-</button><h3 id="dropdown-room__text-3">0</h3><button class="dropdown-btn" id="dropdown-room__btn-3_plus" onclick="dropdown_guest(3, true)">+</button>
+</div>
+</div>
+<div>
+<h3>дети</h3>
+<div class="dropdown__content__btns-block">
+<button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-4_minus" onclick="dropdown_guest(4, false)">-</button><h3 id="dropdown-room__text-4">0</h3><button class="dropdown-btn" id="dropdown-room__btn-4_plus" onclick="dropdown_guest(4, true)">+</button>
+</div>
+</div>
+<div>
+<h3>младенцы</h3>
+<div class="dropdown__content__btns-block">
+<button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-5_minus" onclick="dropdown_guest(5, false)">-</button><h3 id="dropdown-room__text-5">0</h3><button class="dropdown-btn" id="dropdown-room__btn-5_plus" onclick="dropdown_guest(5, true)">+</button>
+</div>
+</div>
+<div class="space-between"><button class="button-3 button-3_grey hidden" onclick="dropdown_guest_clear()" id="dropdown_guest_clear_btn" ><h3>очистить</h3></button><button class="button-3" onclick="dropdown_guest_aply()"><h3>применить</h3></button>
+</div>
+</div></div></div><button class="pay-button" type="button" id="button_id-7"><h3>Подобрать номер<span class="material-icons">arrow_forward</span></h3></button></div><div class="cards-wrapper"><h1>Регистрация аккаунта</h1><div class="text-field"><div><h3></h3><h3></h3></div><input class="form__input" type="text" name="firstname" placeholder="Имя"/></div><div class="text-field"><div><h3></h3><h3></h3></div><input class="form__input" type="text" name="secondname" placeholder="Фамилия"/></div><div class="flex-blocks"><div class="radio-buttons"><input type="checkbox" checked="checked" id="radio-buttons-2"/><label for="radio-buttons-2">Мужчина</label></div><div class="radio-buttons"><input type="checkbox" id="radio-buttons-3"/><label for="radio-buttons-3">Женщина</label></div></div><div class="text-field"><div><h3>дата рождения</h3><h3></h3></div><input class="form__input" type="text" name="date" placeholder="ДД.ММ.ГГГГ"/></div><div class="text-field"><div><h3>данные для входа в сервис</h3><h3></h3></div><input class="form__input" type="text" name="email" placeholder="Email"/></div><div class="text-field"><div><h3></h3><h3></h3></div><input class="form__input" type="text" name="password" placeholder="Пароль"/></div><div class="toggles"><input type="checkbox" id="toggle-2"/><label for="toggle-2">Получать спецпредложения</label></div><button class="pay-button" type="button" id="button_id-8"><h3>Перейти к оплате<span class="material-icons">arrow_forward</span></h3></button><div class="registration-footer"><p class="registration-footer__text">Уже есть аккаунт на Toxin</p><button class="button-2" id="button_id-9"><h3>Войти</h3></button></div></div></div><div class="flex-column"><div class="cards-wrapper"><div class="space-between"><div><h3>№</h3><h1>888</h1><button class="button-3" id="button_id-10"><h3>люкс</h3></button></div><div><p>9 990₽ в сутки</p></div></div><div class="date-dropdown-block"><div><h3>Прибытие</h3></div><div class="date-dropdown"><p>19.08.2019</p><span class="material-icons">expand_more</span></div></div><div class="date-dropdown-block"><div><h3>Выезд</h3></div><div class="date-dropdown"><p>23.08.2019</p><span class="material-icons">expand_more</span></div></div><div class="dropdown-guests">
+<div>
+<h3>dropdown</h3>
+</div><div class="box-shadow" id="dropdown_guests_box_shadow"><div class="dropdown__field"><p id="dropdown-guests__total-count">3 гостя</p><span class="material-icons" onclick="dropdown_hide(dropdown_guest_content_hide, dropdown_guests_box_shadow)">expand_more</span>
+</div>
+<div class="dropdown-guest__content" id="dropdown_guest_content_hide">
+<div>
+<h3>взрослые</h3>
+<div class="dropdown__content__btns-block">
+<button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-3_minus" onclick="dropdown_guest(3, false)">-</button><h3 id="dropdown-room__text-3">3</h3><button class="dropdown-btn" id="dropdown-room__btn-3_plus" onclick="dropdown_guest(3, true)">+</button>
+</div>
+</div>
+<div>
+<h3>дети</h3>
+<div class="dropdown__content__btns-block">
+<button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-4_minus" onclick="dropdown_guest(4, false)">-</button><h3 id="dropdown-room__text-4">0</h3><button class="dropdown-btn" id="dropdown-room__btn-4_plus" onclick="dropdown_guest(4, true)">+</button>
+</div>
+</div>
+<div>
+<h3>младенцы</h3>
+<div class="dropdown__content__btns-block">
+<button class="dropdown-btn dropdown-btn_disabled" id="dropdown-room__btn-5_minus" onclick="dropdown_guest(5, false)">-</button><h3 id="dropdown-room__text-5">0</h3><button class="dropdown-btn" id="dropdown-room__btn-5_plus" onclick="dropdown_guest(5, true)">+</button>
+</div>
+</div>
+<div class="space-between"><button class="button-3 button-3_grey" onclick="dropdown_guest_clear()" id="dropdown_guest_clear_btn" ><h3>очистить</h3></button><button class="button-3" onclick="dropdown_guest_aply()"><h3>применить</h3></button>
+</div>
+</div></div></div><div class="space-between"><p>9 990₽ х 4 суток</p><p>39 960₽</p></div><div class="space-between"><p>Сбор за услуги: скидка 2 179₽<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="9.5" stroke="#1F2041" stroke-opacity="0.25"/>
+</svg></p><p>0₽</p></div><div class="space-between"><p>Сбор за дополнительные услуги<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="9.5" stroke="#1F2041" stroke-opacity="0.25"/>
+</svg></p><p>300₽</p></div><h1>Итого<p>........................</p>38 081₽</h1><button class="pay-button" type="button" id="button_id-11"><h3>Забронировать<span class="material-icons">arrow_forward</span></h3></button></div><div class="cards-wrapper"><h1>Войти<div class="text-field"><div><h3></h3><h3></h3></div><input class="form__input" type="text" name="login-email" placeholder="Email"/></div><div class="text-field"><div><h3></h3><h3></h3></div><input class="form__input" type="text" name="login-password" placeholder="password"/></div><button class="pay-button" type="button" id="button_id-12"><h3>Войти<span class="material-icons">arrow_forward</span></h3></button><div class="registration-footer"><p class="registration-footer__text">Нет акаунта на Toxin?</p><button class="button-2" id="button_id-13"><h3>Создать</h3></button></div></h1></div></div><div class="flex-column"><input type='text' class="datepicker-here" data-range="true" data-position="right top" /></div></div></div><div class="page-wrapper_gray"><div class="header-logo">
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
 <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
@@ -221,7 +284,7 @@
 <stop offset="1" stop-color="#8BA4F9"/>
 </linearGradient>
 </defs>
-</svg></div><ul class="header__nav"><li class="header__nav_active-page"><a href="#">Home</a></li><li><a href="#">About us</a></li><li><a class="header__nav__dropdown" href="#">Services<span class="material-icons">expand_more</span></a></li><li><a href="#">Careers</a></li><li><a href="#">News</a></li><li><a href="#">Documentation</a></li><li><button class="button-2 button-2-header" id="button_id-7"><h3>login</h3></button></li><li><button class="button-1 button-1-header" id="button_id-8"><h3>register</h3></button></li></ul></header></div><div class="row-wrapper"><header><div class="header__company"><svg width="106" height="40" viewBox="0 0 106 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+</svg></div><ul class="header__nav"><li class="header__nav_active-page"><a href="#">Home</a></li><li><a href="#">About us</a></li><li><a class="header__nav__dropdown" href="#">Services<span class="material-icons">expand_more</span></a></li><li><a href="#">Careers</a></li><li><a href="#">News</a></li><li><a href="#">Documentation</a></li><li><button class="button-2 button-2-header" id="button_id-14"><h3>login</h3></button></li><li><button class="button-1 button-1-header" id="button_id-15"><h3>register</h3></button></li></ul></header></div><div class="row-wrapper"><header><div class="header__company"><svg width="106" height="40" viewBox="0 0 106 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M62.335 13.368C62.5567 13.368 62.7375 13.4438 62.8775 13.5955C63.0292 13.7355 63.105 13.9163 63.105 14.138C63.105 14.348 63.0292 14.5288 62.8775 14.6805C62.7375 14.8322 62.5567 14.908 62.335 14.908H58.5725V25.408C58.5725 25.6297 58.4967 25.8163 58.345 25.968C58.205 26.108 58.0242 26.178 57.8025 26.178C57.5925 26.178 57.4117 26.108 57.26 25.968C57.1083 25.8163 57.0325 25.6297 57.0325 25.408V14.908H53.27C53.06 14.908 52.8792 14.8322 52.7275 14.6805C52.5758 14.5288 52.5 14.348 52.5 14.138C52.5 13.9163 52.5758 13.7355 52.7275 13.5955C52.8792 13.4438 53.06 13.368 53.27 13.368H62.335Z" fill="#1F2041"/>
 <path d="M68.9076 13.368C69.7943 13.368 70.6285 13.5372 71.4101 13.8755C72.2035 14.2138 72.8918 14.6747 73.4751 15.258C74.0701 15.8413 74.5368 16.5297 74.8751 17.323C75.2134 18.1047 75.3826 18.9388 75.3826 19.8255C75.3826 20.8638 75.1609 21.8205 74.7176 22.6955C74.2743 23.5705 73.6735 24.3055 72.9151 24.9005C72.9151 24.9005 72.9035 24.9122 72.8801 24.9355C72.3201 25.3555 71.7076 25.688 71.0426 25.933C70.3776 26.1663 69.666 26.283 68.9076 26.283C68.0209 26.283 67.1868 26.1138 66.4051 25.7755C65.6234 25.4372 64.9351 24.9763 64.3401 24.393C63.7568 23.8097 63.296 23.1272 62.9576 22.3455C62.6193 21.5638 62.4501 20.7238 62.4501 19.8255C62.4501 18.8455 62.6484 17.9413 63.0451 17.113C63.4418 16.273 63.9843 15.5555 64.6726 14.9605L64.7426 14.8905C64.7543 14.8905 64.7718 14.8788 64.7951 14.8555C65.3551 14.3888 65.9851 14.0272 66.6851 13.7705C67.3851 13.5022 68.1259 13.368 68.9076 13.368ZM68.9076 24.743C69.351 24.743 69.771 24.6905 70.1676 24.5855C70.576 24.4688 70.961 24.3113 71.3226 24.113L65.1801 16.6405C64.8068 17.0722 64.5151 17.5622 64.3051 18.1105C64.0951 18.6472 63.9901 19.2188 63.9901 19.8255C63.9901 20.5022 64.1185 21.138 64.3751 21.733C64.6318 22.328 64.9818 22.853 65.4251 23.308C65.8801 23.7513 66.4051 24.1013 67.0001 24.358C67.5951 24.6147 68.231 24.743 68.9076 24.743ZM72.5301 23.1505C72.9384 22.7072 73.2535 22.2055 73.4751 21.6455C73.7085 21.0738 73.8251 20.4672 73.8251 19.8255C73.8251 19.1488 73.6968 18.513 73.4401 17.918C73.1834 17.323 72.8276 16.8038 72.3726 16.3605C71.9293 15.9055 71.4101 15.5497 70.8151 15.293C70.2201 15.0363 69.5843 14.908 68.9076 14.908C68.4409 14.908 67.9918 14.9722 67.5601 15.1005C67.1284 15.2172 66.7259 15.3922 66.3526 15.6255L72.5301 23.1505Z" fill="#1F2041"/>
 <path d="M82.351 20.6305C82.1177 20.6305 81.9194 20.5372 81.756 20.3505L77.2585 14.5755C77.1302 14.4122 77.0777 14.2313 77.101 14.033C77.1244 13.823 77.2177 13.6538 77.381 13.5255C77.5444 13.3972 77.7252 13.3505 77.9235 13.3855C78.1335 13.4088 78.3027 13.5022 78.431 13.6655L82.351 18.6705L86.1835 13.753C86.3119 13.5897 86.4752 13.4963 86.6735 13.473C86.8835 13.4497 87.0702 13.5022 87.2335 13.6305C87.3969 13.7588 87.4902 13.928 87.5135 14.138C87.5369 14.3363 87.4844 14.5172 87.356 14.6805L82.946 20.3505C82.7944 20.5372 82.596 20.6305 82.351 20.6305ZM87.2685 26.2655C87.2219 26.2655 87.146 26.2597 87.041 26.248C86.9477 26.2363 86.8369 26.2072 86.7085 26.1605C86.5802 26.1022 86.4402 26.0263 86.2885 25.933C86.1485 25.828 86.0085 25.688 85.8685 25.513L82.351 20.9805L78.5185 25.9155C78.3902 26.0788 78.221 26.1722 78.011 26.1955C77.8127 26.2188 77.6319 26.1663 77.4685 26.038C77.3052 25.9097 77.2119 25.7463 77.1885 25.548C77.1652 25.338 77.2177 25.1513 77.346 24.988L81.756 19.318C81.896 19.1313 82.0885 19.038 82.3335 19.038C82.5902 19.038 82.7944 19.1313 82.946 19.318L87.041 24.568C87.0994 24.6497 87.1519 24.7022 87.1985 24.7255C87.2452 24.7488 87.2802 24.7663 87.3035 24.778C87.5019 24.778 87.6652 24.848 87.7935 24.988C87.9335 25.1163 88.0094 25.2797 88.021 25.478C88.0444 25.688 87.986 25.8688 87.846 26.0205C87.706 26.1722 87.531 26.2538 87.321 26.2655H87.2685Z" fill="#1F2041"/>
@@ -294,4 +357,4 @@
 </defs>
 </svg></div><p class="footer_display-center footer-2__text-wrapper">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p><div class="brand-icon footer_display-center"><i class="fab fa-twitter"></i>
 <i class="fab fa-facebook-square"></i>
-<i class="fab fa-instagram"></i></div></div></div></div></div></html>
+<i class="fab fa-instagram"></i></div></div></div></div><div class="dasdasd"><div class="circle">dsadasdas</div></div></div></html>

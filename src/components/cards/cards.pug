@@ -1,0 +1,66 @@
+mixin registration-card()
+    .cards-wrapper
+        h1 Регистрация аккаунта
+        +text-field('firstname','Имя')
+        +text-field('secondname','Фамилия')
+        .flex-blocks
+              +radio-button('Мужчина',true)
+              +radio-button('Женщина')
+        +text-field('date','ДД.ММ.ГГГГ','дата рождения')
+        +text-field('email','Email','данные для входа в сервис')
+        +text-field('password','Пароль')
+        +toggle('Получать спецпредложения')
+        +pay-button('Перейти к оплате')
+        .registration-footer
+            p.registration-footer__text Уже есть аккаунт на Toxin
+            +button_2('Войти')
+
+mixin room-finder-card()
+    .cards-wrapper
+        h1 Найдём номера под ваши пожелания
+        .flex-blocks.row-wrapper
+            +date-dropdown('Прибытие','ДД.ММ.ГГГГ')
+            +date-dropdown('Выезд','ДД.ММ.ГГГГ')
+        +dropdown-guests_not-hidden("Сколько гостей",0,0,0)
+        +pay-button('Подобрать номер')
+
+mixin login-card()
+    .cards-wrapper
+        h1 Войти
+            +text-field('login-email','Email')
+            +text-field('login-password','password')
+            +pay-button('Войти')
+            .registration-footer
+                p.registration-footer__text Нет акаунта на Toxin?
+                +button_2('Создать')
+
+mixin room-card()
+    .cards-wrapper
+        .space-between
+            div
+                h3 №
+                h1 888
+                +button_3('люкс')
+            div
+                p 9 990₽ в сутки
+        +date-dropdown('Прибытие','19.08.2019')
+        +date-dropdown('Выезд','23.08.2019')
+        +dropdown-guests_not-hidden("3 гостя",3,0,0)
+        .space-between
+            p 9 990₽ х 4 суток
+            p 39 960₽
+        .space-between
+            p Сбор за услуги: скидка 2 179₽
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="9.5" stroke="#1F2041" stroke-opacity="0.25"/>
+                </svg>
+            p 0₽
+        .space-between
+            p Сбор за дополнительные услуги
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="10" r="9.5" stroke="#1F2041" stroke-opacity="0.25"/>
+                </svg>
+            p 300₽
+        <h1>Итого<p>........................</p>38 081₽</h1>
+        +pay-button('Забронировать')
+
