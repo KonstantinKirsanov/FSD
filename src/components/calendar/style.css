@@ -19,20 +19,20 @@
 .-selected-.datepicker--cell-day.-other-month-,
 .-selected-.datepicker--cell-year.-other-decade- {
   color: #fff;
-  background: #a2ddf6;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-selected-.-focus-.datepicker--cell-day.-other-month-,
 .-selected-.-focus-.datepicker--cell-year.-other-decade- {
-  background: #8ad5f4;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.1);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
 }
 .datepicker--cell-day.-other-month-:empty,
 .datepicker--cell-year.-other-decade-:empty {
@@ -43,6 +43,8 @@
     Datepicker cells
    ------------------------------------------------- */
 .datepicker--cells {
+  position: relative;
+  z-index: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -76,9 +78,6 @@
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
   font-weight: bold;
 }
-.datepicker--cell.-current-.-focus- {
-  color: #4a4a4a;
-}
 .datepicker--cell.-current-.-in-range- {
   color: rgba(31, 32, 65, 0.5);
 }
@@ -88,7 +87,7 @@
   border-radius: 0;
 }
 .datepicker--cell.-in-range-.-focus- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.4) 0%, rgba(139, 165, 249, 0.4) 100%);
 }
 .datepicker--cell.-disabled- {
   cursor: default;
@@ -104,7 +103,10 @@
   color: #aeaeae;
 }
 .datepicker--cell.-range-from- {
-  position: relative;
+  color: #ffffff;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  font-weight: bold;
 }
 .datepicker--cell.-range-from-::before {
   position: absolute;
@@ -113,7 +115,7 @@
   background: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   width: 50%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.99;
 }
 .datepicker--cell.-range-to- {
@@ -129,7 +131,7 @@
   background: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   width: 50%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   opacity: 0.99;
 }
 .datepicker--cell.-range-from-.-range-to- {
@@ -160,6 +162,15 @@
   margin: 8px 0 3px;
 }
 .datepicker--day-name {
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  text-transform: capitalize;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
   color: #BC9CFF;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -174,7 +185,6 @@
   -ms-flex: 1;
   flex: 1;
   text-align: center;
-  text-transform: uppercase;
   font-size: 0.8em;
 }
 .datepicker--cell-day {
@@ -218,20 +228,20 @@
 .-selected-.datepicker--cell-day.-other-month-,
 .-selected-.datepicker--cell-year.-other-decade- {
   color: #fff;
-  background: #a2ddf6;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-selected-.-focus-.datepicker--cell-day.-other-month-,
 .-selected-.-focus-.datepicker--cell-year.-other-decade- {
-  background: #8ad5f4;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.1);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.4) 0%, rgba(139, 165, 249, 0.4) 100%);
 }
 .datepicker--cell-day.-other-month-:empty,
 .datepicker--cell-year.-other-decade-:empty {
@@ -257,7 +267,8 @@
   font-family: Tahoma, sans-serif;
   font-size: 14px;
   color: rgba(31, 32, 65, 0.5);
-  width: 250px;
+  width: 280px;
+  padding: 20px;
   position: absolute;
   left: -100000px;
   opacity: 0;
@@ -305,7 +316,6 @@
 }
 .datepicker--content {
   box-sizing: content-box;
-  padding: 4px;
 }
 .-only-timepicker- .datepicker--content {
   display: none;
@@ -392,20 +402,20 @@
 .-selected-.datepicker--cell-day.-other-month-,
 .-selected-.datepicker--cell-year.-other-decade- {
   color: #fff;
-  background: #a2ddf6;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-selected-.-focus-.datepicker--cell-day.-other-month-,
 .-selected-.-focus-.datepicker--cell-year.-other-decade- {
-  background: #8ad5f4;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.1);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.4) 0%, rgba(139, 165, 249, 0.4) 100%);
 }
 .datepicker--cell-day.-other-month-:empty,
 .datepicker--cell-year.-other-decade-:empty {
@@ -423,7 +433,6 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 32px;
-  padding: 4px;
 }
 .-only-timepicker- .datepicker--nav {
   display: none;
@@ -484,7 +493,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 4px;
   border-top: 1px solid #efefef;
 }
 .datepicker--button {
@@ -524,20 +532,20 @@
 .-selected-.datepicker--cell-day.-other-month-,
 .-selected-.datepicker--cell-year.-other-decade- {
   color: #fff;
-  background: #a2ddf6;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-selected-.-focus-.datepicker--cell-day.-other-month-,
 .-selected-.-focus-.datepicker--cell-year.-other-decade- {
-  background: #8ad5f4;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.1);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.4) 0%, rgba(139, 165, 249, 0.4) 100%);
 }
 .datepicker--cell-day.-other-month-:empty,
 .datepicker--cell-year.-other-decade-:empty {
@@ -794,20 +802,20 @@
 .-selected-.datepicker--cell-day.-other-month-,
 .-selected-.datepicker--cell-year.-other-decade- {
   color: #fff;
-  background: #a2ddf6;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-selected-.-focus-.datepicker--cell-day.-other-month-,
 .-selected-.-focus-.datepicker--cell-year.-other-decade- {
-  background: #8ad5f4;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 .-in-range-.datepicker--cell-day.-other-month-,
 .-in-range-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.1);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.25) 0%, rgba(139, 165, 249, 0.25) 100%);
   color: #cccccc;
 }
 .-in-range-.-focus-.datepicker--cell-day.-other-month-,
 .-in-range-.-focus-.datepicker--cell-year.-other-decade- {
-  background-color: rgba(92, 196, 239, 0.2);
+  background-color: linear-gradient(180deg, rgba(187, 156, 255, 0.4) 0%, rgba(139, 165, 249, 0.4) 100%);
 }
 .datepicker--cell-day.-other-month-:empty,
 .datepicker--cell-year.-other-decade-:empty {
