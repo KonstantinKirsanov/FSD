@@ -1,7 +1,9 @@
 ;(function (window, $, undefined) { ;(function () {
     var VERSION = '2.2.3',
         pluginName = 'datepicker',
-        autoInitSelector = '.datepicker-here',
+        firstOutput = "#datepicker-here-1",
+        secondOutput = "#datepicker-here-2",
+        autoInitSelector = firstOutput,
         $body, $datepickersContainer,
         containerBuilt = false,
         baseTemplate = '' +
@@ -691,18 +693,20 @@
                     return _this.formatDate(format, date)
                 }),
                 altValues;
-
             if (opts.altField && _this.$altField.length) {
                 altValues = this.selectedDates.map(function (date) {
                     return _this.formatDate(altFormat, date)
                 });
                 altValues = altValues.join(this.opts.multipleDatesSeparator);
                 this.$altField.val(altValues);
+
             }
-
-            value = value.join(this.opts.multipleDatesSeparator);
-
-            this.$el.val(value)
+            console.log(value);
+            $(firstOutput).val(value[0]);
+            $(secondOutput).val(value[1]);
+            // value = value.join(this.opts.multipleDatesSeparator);
+            
+            // this.$el.val(value)
         },
 
         /**

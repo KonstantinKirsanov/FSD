@@ -19,8 +19,18 @@ mixin room-finder-card()
     .cards-wrapper
         h1 Найдём номера под ваши пожелания
         .flex-blocks.row-wrapper
-            +date-dropdown('Прибытие','ДД.ММ.ГГГГ')
-            +date-dropdown('Выезд','ДД.ММ.ГГГГ')
+            .date-dropdown-block
+                div
+                    h3 Прибытие
+                <input type="text" id="datepicker-here-1" data-range="true" data-position="right top">
+                    p ДД.ММ.ГГГГ
+                    <span class="material-icons">expand_more</span>
+            .date-dropdown-block
+                div
+                    h3 Выезд
+                <input type="text" id="datepicker-here-2" data-range="true" data-position="right top">
+                    p ДД.ММ.ГГГГ
+                    <span class="material-icons">expand_more</span>
         +dropdown-guests_not-hidden("Сколько гостей",0,0,0)
         +pay-button('Подобрать номер')
 
